@@ -5,6 +5,7 @@ import { closet } from './closet.ts';
 import { tvStand } from './tv-stand.ts';
 import { desk } from './desk.ts';
 import { pantry } from './pantry.ts';
+import { bedBase } from './bed-base.ts';
 import { nest } from '../nesting.ts';
 import type { Design, Template, TemplateParams } from '../types.ts';
 import { FIBRACEL_3 } from '../stock.ts';
@@ -22,7 +23,7 @@ function totalQty(design: Design): number {
 
 const MELAMINE_SIZE: Record<string, TemplateParams> = { 'tv-stand': { width: 1000 }, desk: { depth: 500 } };
 
-for (const template of [bookshelf, sideTable, closet, tvStand, pantry, desk]) {
+for (const template of [bookshelf, sideTable, closet, tvStand, pantry, desk, bedBase]) {
   describe(`${template.id} (shared invariants)`, () => {
     const design = designOrThrow(template);
 
