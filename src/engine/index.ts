@@ -17,6 +17,7 @@ export { sideTable, generateSideTable } from './templates/side-table.ts';
 export { closet, generateCloset } from './templates/closet.ts';
 export { tvStand, generateTvStand } from './templates/tv-stand.ts';
 export { pantry, generatePantry } from './templates/pantry.ts';
+export { desk, generateDesk } from './templates/desk.ts';
 export * from './welding/index.ts';
 
 import type { Template } from './types.ts';
@@ -25,5 +26,6 @@ import { sideTable } from './templates/side-table.ts';
 import { closet } from './templates/closet.ts';
 import { tvStand } from './templates/tv-stand.ts';
 import { pantry } from './templates/pantry.ts';
+import { desk } from './templates/desk.ts';
 
-export const templates: Template[] = [bookshelf, sideTable, closet, tvStand, pantry];
+export const templates: Template[] = [bookshelf, sideTable, closet, tvStand, pantry, desk];
