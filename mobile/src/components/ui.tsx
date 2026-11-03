@@ -79,6 +79,7 @@ const THUMBS: Record<string, string> = {
   desk: 'M3 12h34M5 12v24M35 12v24M23 12v24M23 22h12M23 30h12M27 17h4',
   'bed-base': 'M3 16h34v14H3zM20 16v14M8 23h7M25 23h7M3 16v-6h4v6',
   'shoe-rack': 'M8 4h24v30H8zM8 12h24M8 20h24M8 28h24M11 34v2M29 34v2',
+  'floating-shelves': 'M6 8h28v5H6zM6 20h28v5H6zM6 32h28v5H6z',
   'weld-table': 'M4 13h32M4 15.5h32M7 15.5v20M33 15.5v20M7 29h26',
   'weld-stool': 'M11 10h18M11 12.5h18M13 12.5v24M27 12.5v24M13 26h14',
   'weld-shelf': 'M9 4v32M31 4v32M9 6h22M9 16h22M9 26h22M9 34h22',

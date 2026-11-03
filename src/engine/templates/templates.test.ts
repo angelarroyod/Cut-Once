@@ -5,6 +5,7 @@ import { closet } from './closet.ts';
 import { tvStand } from './tv-stand.ts';
 import { desk } from './desk.ts';
 import { pantry } from './pantry.ts';
+import { floatingShelves } from './floating-shelves.ts';
 import { shoeRack } from './shoe-rack.ts';
 import { bedBase } from './bed-base.ts';
 import { nest } from '../nesting.ts';
@@ -24,7 +25,7 @@ function totalQty(design: Design): number {
 
 const MELAMINE_SIZE: Record<string, TemplateParams> = { 'tv-stand': { width: 1000 }, desk: { depth: 500 } };
 
-for (const template of [bookshelf, sideTable, closet, tvStand, pantry, desk, bedBase, shoeRack]) {
+for (const template of [bookshelf, sideTable, closet, tvStand, pantry, desk, bedBase, shoeRack, floatingShelves]) {
   describe(`${template.id} (shared invariants)`, () => {
     const design = designOrThrow(template);
 

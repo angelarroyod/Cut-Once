@@ -20,6 +20,7 @@ export { pantry, generatePantry } from './templates/pantry.ts';
 export { desk, generateDesk } from './templates/desk.ts';
 export { bedBase, generateBedBase } from './templates/bed-base.ts';
 export { shoeRack, generateShoeRack } from './templates/shoe-rack.ts';
+export { floatingShelves, generateFloatingShelves } from './templates/floating-shelves.ts';
 export * from './welding/index.ts';
 
 import type { Template } from './types.ts';
@@ -31,5 +32,6 @@ import { pantry } from './templates/pantry.ts';
 import { desk } from './templates/desk.ts';
 import { bedBase } from './templates/bed-base.ts';
 import { shoeRack } from './templates/shoe-rack.ts';
+import { floatingShelves } from './templates/floating-shelves.ts';
 
-export const templates: Template[] = [bookshelf, sideTable, closet, tvStand, pantry, desk, bedBase, shoeRack];
+export const templates: Template[] = [bookshelf, sideTable, closet, tvStand, pantry, desk, bedBase, shoeRack, floatingShelves];
