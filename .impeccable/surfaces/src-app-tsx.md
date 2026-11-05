@@ -36,7 +36,7 @@ OWN-WORLD:
 STORY: A beginner sees the piece standing on a measurable page and drags a size; the number and the model change together. They follow cuts, steps and the store list without leaving the notebook, and take the order to the counter.
 
 FIRST VIEWPORT:
-- Desktop: a 64 px top bar with the mark and Planificador, the Madera|Metal segmented control, the four view tabs, the theme toggle, and Exportar PDF as the primary action.
+- Desktop: a 64 px top bar with the mark and Cut Once, the Madera|Metal segmented control, the four view tabs, the theme toggle, and Exportar PDF as the primary action.
 - The 340 px rail holds the template list with line-drawn thumbnails, then grouped params with chips and editable values. A 1 px red margin rule separates rail from stage.
 - The stage fills the rest on the cuadrícula: the model in the centre, a scale bar top right, the live readout top left while dragging, and a summary strip at the bottom.
 - Phone: top bar, then the stage at 55vh, params below, and the tabs as a bottom bar.

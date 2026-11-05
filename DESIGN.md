@@ -1,5 +1,5 @@
 ---
-name: Planificador
+name: Cut Once
 description: A maker's grid notebook for planning plywood furniture and welded tube projects, from sizes to the yard order.
 colors:
   paper: "#f4f7fb"
@@ -197,7 +197,7 @@ components:
     padding: "6px 14px"
 ---
 
-# Design System: Planificador
+# Design System: Cut Once
 
 ## Overview
 

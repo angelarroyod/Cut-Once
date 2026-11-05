@@ -52,19 +52,17 @@ export function Display({
   );
 }
 
-/** The app's mark, same as the web top bar: a ballpoint page of cuadrícula with one highlighted row. */
+/** The app's mark, same as the web top bar: one board, one saw cut, and the cut is the numeral 1. */
 export function Mark({ size = 56 }: { size?: number }) {
   const c = usePalette();
   return (
-    <Svg viewBox="0 0 32 32" width={size} height={size} accessibilityLabel="Planificador">
-      <Rect width={32} height={32} rx={8} fill={c.accent} />
-      <Rect x={7} y={17.5} width={18} height={5} rx={1.5} fill={c.hi} />
+    <Svg viewBox="0 0 256 256" width={size} height={size} accessibilityLabel="Cut Once">
+      <Rect width={256} height={256} rx={56} fill={c.accent} />
       <Path
-        d="M7 9.5h18M7 14.5h18M7 19.5h18M7 24.5h18M9.5 7v18M14.5 7v18M19.5 7v18M24.5 7v18"
-        stroke="#fff"
-        strokeOpacity={0.55}
-        strokeWidth={1}
+        fill={ON_ACCENT}
+        d="M64 44.8H122L83.6 83.2L101.28 100.88L122 80.24V211.2H64A19.2 19.2 0 0 1 44.8 192V64A19.2 19.2 0 0 1 64 44.8Z"
       />
+      <Path fill={c.hi} d="M146.8 44.8H192A19.2 19.2 0 0 1 211.2 64V192A19.2 19.2 0 0 1 192 211.2H146.8Z" />
     </Svg>
   );
 }
