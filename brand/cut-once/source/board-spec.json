@@ -1,0 +1,40 @@
+{
+  "brand": "Cut Once",
+  "tagline": "Furniture and metalwork plans for first-time builders",
+  "brief": "A planner for people who have never built furniture. Pick a template, set your sizes, and get a 3D preview, a cut plan and build steps. The name and mark should calm the beginner's fear of ruining material.",
+  "adjectives": ["reassuring", "practical", "precise", "beginner-first"],
+  "criteria": "Success: reads as a 1 cut through a board, holds at 16 px and in one colour, and works for wood and metal.",
+  "mockups": ["app-icon", "favicon-tab", "website", "social", "sticker", "tshirt"],
+  "nav": ["Templates", "Cut plans", "Build steps"],
+  "brand_color": "#2340c8",
+  "tile_color": "#2340c8",
+  "greyscale": false,
+  "final": true,
+  "designer": "Claude",
+  "concepts": [
+    {
+      "name": "Cut Once",
+      "symbol": "../logo/symbol/cut-once-symbol-color.svg",
+      "lockup": "../logo/horizontal/cut-once-horizontal-color.svg",
+      "stacked": "../logo/stacked/cut-once-stacked-color.svg",
+      "symbol_on_tile": "../logo/symbol/cut-once-symbol-on-dark.svg",
+      "lockup_on_tile": "../logo/horizontal/cut-once-horizontal-on-dark.svg",
+      "stacked_on_tile": "../logo/stacked/cut-once-stacked-on-dark.svg",
+      "symbol_on_dark": "../logo/symbol/cut-once-symbol-on-dark.svg",
+      "lockup_on_dark": "../logo/horizontal/cut-once-horizontal-on-dark.svg",
+      "stacked_on_dark": "../logo/stacked/cut-once-stacked-on-dark.svg",
+      "idea": "One board, one saw cut, and the cut is the numeral 1.",
+      "rationale": [
+        "Says the name without a saw blade or wood grain, so it also fits metalwork",
+        "The kerf is the app's own vocabulary: the gap every cut plan accounts for",
+        "Keeps the app's ballpoint blue and highlighter yellow, so it belongs to the notebook"
+      ]
+    }
+  ],
+  "recommendation": "Cut Once: one idea, explained in one sentence, that holds from a 16 px browser tab to a printed sign.",
+  "next_steps": [
+    "Run a professional trademark search on the name and the mark",
+    "Choose and register a domain",
+    "Replace the name and icons in the web and iOS apps"
+  ]
+}

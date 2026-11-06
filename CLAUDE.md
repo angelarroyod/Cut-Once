@@ -1,6 +1,6 @@
-# Plywood Furniture Planner
+# Cut Once
 
-Beginner-friendly web app for designing plywood furniture. Users pick a template, customize dimensions within safe limits, and get three synchronized views: 3D preview, optimized cut diagram, and step-by-step build instructions. Everything exports to PDF.
+Formerly Planificador; the repo is still `plywood-planner`. Beginner-friendly web app for designing plywood furniture. Users pick a template, customize dimensions within safe limits, and get three synchronized views: 3D preview, optimized cut diagram, and step-by-step build instructions. Everything exports to PDF.
 
 ## Core architecture principle (non-negotiable)
 
@@ -20,6 +20,7 @@ A furniture template is NOT a static 3D model. It is a pure function:
 - Ask before adding any dependency not already approved (approved: Vite, React 18, TypeScript, Tailwind, @react-three/fiber, @react-three/drei, Zustand, Vitest, pnpm).
 - All internal units are millimeters. Display will support cm and mm.
 - Supabase only in Phase 6 — no auth/backend scaffolding before then.
+- Brand: `brand/cut-once/` holds the logo kit and usage guide, and `source/build_kit.py` regenerates it. The mark is also drawn inline in `Brand` (web) and `Mark` (iOS), and `public/` and `mobile/assets/images/` hold copies of its icons. The `planificador.*` `localStorage` keys keep the old name on purpose: renaming them would wipe users' saved prices and theme.
 
 ## Engine conventions
 
@@ -128,6 +129,7 @@ A furniture template is NOT a static 3D model. It is a pure function:
 - Screens live in `src/app` (routes only) and `src/screens` (bodies), per Expo's project-structure guidance.
 - Not real yet, by design: saved projects and the account footer are fixtures (needs Phase 6), and the camera screen's distance is simulated and labelled as such — LiDAR needs a custom ARKit native module.
 - `patch-package` (approved, dev-only) runs on `postinstall` and applies `mobile/patches/`. Its one patch makes `query-string@7` (pinned by expo-router 57) read `.default` from `decode-uri-component`, which `overrides` forces to the ESM-only 0.5.0 for GHSA-vcc3-ghjq-m6fr. Drop the patch, that override, and patch-package once expo-router stops depending on `query-string@7`; if `npm ci` reports the patch failed to apply, that is the signal to check.
+- The iOS icon is `assets/images/icon.png`, a plain 1024 px PNG with no alpha. It is not an Icon Composer `.icon` package, because that can't be checked without a Mac. Android's adaptive icons are still Expo's defaults.
 - Verify with `npx tsc --noEmit` and `npx expo export --platform ios`; a device build needs EAS, since there is no Mac here.
 
 ## Commands

@@ -40,7 +40,7 @@ Cut optimizers (CutList Optimizer, Opticorte, Arauco TABLERED) stop at pieces; p
 
 - Both a light and a dark theme, with a toggle (confirmed by the owner).
 - Quality bar, in the owner's words: it must never look like "a cheap vibe code app with 0 sense of design and aesthetics".
-- The product name "Planificador" and the current mark exist but are not pinned.
+- The product name is "Cut Once" (chosen 2026-11-03, replacing Planificador); the UI stays in Spanish. The logo kit and usage rules live in `brand/cut-once/`. No trademark search has been run yet.
 
 ## Evidence on Hand
 
