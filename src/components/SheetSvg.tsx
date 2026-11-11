@@ -1,6 +1,7 @@
 import { NO_EDGES, bandSegments } from '../engine/edge-banding.ts';
 import { BADGE_RADIUS, cutBadge, sheetCuts } from '../engine/cuts.ts';
 import type { EdgeBands, SheetLayout } from '../engine/types.ts';
+import { pieceLabel } from './pieceLabel.ts';
 
 interface Props {
   sheet: SheetLayout;
@@ -14,6 +15,56 @@ interface Props {
 const BAND_INSET = 7; // mm; banded edges are 14 mm lines that stay inside the piece
 
 const MONO = 'Inter, ui-sans-serif, system-ui, sans-serif'; // numbers set with tabular figures by the root
+
+interface PieceTextProps {
+  name: string;
+  dims: string;
+  x: number;
+  y: number;
+  width: number;
+  length: number;
+}
+
+/** Name and size centred in the piece, turned or shortened to stay inside it; the full name is the tooltip. */
+function PieceText({ name, dims, x, y, width, length }: PieceTextProps) {
+  const l = pieceLabel(name, dims, width, length);
+  const cx = x + width / 2;
+  const cy = y + length / 2;
+  const dimsSize = l.size * (34 / 42);
+  const gap = l.dims ? l.size * 0.62 : 0; // splits the two lines around the centre
+  return (
+    <g transform={l.rotate ? `rotate(-90 ${cx} ${cy})` : undefined}>
+      <title>
+        {name} · {dims} mm
+      </title>
+      <text
+        x={cx}
+        y={cy - gap}
+        fontSize={l.size}
+        fontFamily={MONO}
+        fontWeight={600}
+        textAnchor="middle"
+        dominantBaseline="central"
+        fill="var(--color-piece-label)"
+      >
+        {l.name}
+      </text>
+      {l.dims && (
+        <text
+          x={cx}
+          y={cy + gap}
+          fontSize={dimsSize}
+          fontFamily={MONO}
+          textAnchor="middle"
+          dominantBaseline="central"
+          fill="var(--color-piece-dims)"
+        >
+          {l.dims}
+        </text>
+      )}
+    </g>
+  );
+}
 
 /** One sheet as SVG, 1 SVG unit = 1 mm, sized by its stock. Shared by screen view and print report. */
 export function SheetSvg({ sheet, labels, edges, className, highlight = null, onPiece }: Props) {
@@ -57,27 +108,14 @@ export function SheetSvg({ sheet, labels, edges, className, highlight = null, on
           {bandSegments(p, edges[p.panelId] ?? NO_EDGES, BAND_INSET).map((s, i) => (
             <line key={i} {...s} stroke="var(--color-piece-label)" strokeWidth={BAND_INSET * 2} />
           ))}
-          <text
-            x={p.x + p.width / 2}
-            y={p.y + p.length / 2 - 10}
-            fontSize={42}
-            fontFamily={MONO}
-            fontWeight={600}
-            textAnchor="middle"
-            fill="var(--color-piece-label)"
-          >
-            {labels[p.panelId] ?? p.panelId} #{p.instance + 1}
-          </text>
-          <text
-            x={p.x + p.width / 2}
-            y={p.y + p.length / 2 + 40}
-            fontSize={34}
-            fontFamily={MONO}
-            textAnchor="middle"
-            fill="var(--color-piece-dims)"
-          >
-            {p.width} × {p.length}
-          </text>
+          <PieceText
+            name={`${labels[p.panelId] ?? p.panelId} #${p.instance + 1}`}
+            dims={`${p.width} × ${p.length}`}
+            x={p.x}
+            y={p.y}
+            width={p.width}
+            length={p.length}
+          />
         </g>
       ))}
 
