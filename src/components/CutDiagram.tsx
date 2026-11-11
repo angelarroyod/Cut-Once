@@ -76,17 +76,18 @@ export function CutDiagram({ design }: { design: Design }) {
 
         <p className="mt-4 max-w-2xl text-[13px] leading-relaxed text-ink-soft">{CUT_TIP}</p>
 
-        <div className="mt-6 flex flex-col gap-8 lg:flex-row lg:items-start">
-          <section className="stage-grid flex min-w-0 flex-1 flex-wrap justify-center gap-8 rounded-2xl border border-rule p-5 lg:justify-start">
+        <div className="mt-6 flex flex-col gap-8 xl:flex-row xl:items-start">
+          {/* a sheet is never narrower than 20rem, so 42 mm labels stay at 11 px or more on screen */}
+          <section className="stage-grid grid min-w-0 flex-1 grid-cols-[repeat(auto-fill,minmax(min(100%,20rem),1fr))] gap-x-6 gap-y-8 rounded-2xl border border-rule p-3 sm:p-5">
             {layout.sheets.map((sheet, i) => (
-              <figure key={i} className="w-[15rem]">
+              <figure key={i} className="mx-auto w-full max-w-[26rem]">
                 <SheetSvg
                   sheet={sheet}
                   labels={labels}
                   edges={edges}
                   highlight={lit}
                   onPiece={setLit}
-                  className="h-[30rem] w-full rounded-md shadow-[0_2px_10px_rgb(20_26_43/0.12)]"
+                  className="block h-auto w-full rounded-md shadow-[0_2px_10px_rgb(20_26_43/0.12)]"
                 />
                 <figcaption className="mt-2.5 text-center text-[13px] font-semibold">
                   Hoja {i + 1} · {sheet.stock.label}
@@ -103,7 +104,7 @@ export function CutDiagram({ design }: { design: Design }) {
             ))}
           </section>
 
-          <section className="w-full space-y-8 lg:w-80 lg:shrink-0">
+          <section className="grid w-full gap-8 md:grid-cols-2 xl:block xl:w-72 xl:shrink-0 xl:space-y-8">
             <div>
               <h3 className="rule-label">Piezas</h3>
               <table className="mt-3 w-full text-sm">
