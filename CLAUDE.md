@@ -93,8 +93,9 @@ A furniture template is NOT a static 3D model. It is a pure function:
   - Components never read the theme, only tokens, with one exception: `Viewer3D` mirrors the palette in a `PALETTE` record because WebGL cannot read CSS variables. In a step, parts it names turn highlighter, the rest become translucent pencil ghosts, and a rim light separates dark tube from the night page.
 - Components never branch on medium; that is why `SheetSvg` fills use `var(--color-piece)` etc. rather than hex.
 - Fonts come from Google Fonts in `index.html`:
-  - Atkinson Hyperlegible Next for all UI and display. `.display` is the heavy sentence-case voice; there is no uppercase tracked labelling.
-  - Atkinson Hyperlegible Mono (`font-mono`) for every number and measurement only, with tabular figures. Its slashed zero is the face's own legibility glyph.
+  - Inter (variable, optical size) for everything: UI, display and numbers. `body` turns on `cv05`/`cv08` (tailed l, serifed I) and tabular figures. `.display` is the heavy sentence-case voice; there is no uppercase tracked labelling.
+  - `font-mono` still marks every number and measurement, but it is Inter too: it only adds a slashed zero. SVG text (`SheetSvg`, weld bars) names Inter directly.
+  - The wordmark in `Brand` is the kit's outlined path, not live text, so it keeps its own lettering. The iOS app still uses Atkinson until it gets the same pass.
 - Layout:
   - Desktop: a 64 px top bar (mode switch, view tabs, theme, Exportar PDF), a 340 px rail and the stage.
   - Below `lg`: the stage first, the rail under it (Diseño only), and the view tabs as a bottom bar. It is the same `role="tablist"` element, repositioned.

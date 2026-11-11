@@ -3,27 +3,27 @@ name: Cut Once
 description: A maker's grid notebook for planning plywood furniture and welded tube projects, from sizes to the yard order.
 colors:
   paper: "#f4f7fb"
-  paper-night: "#0c1226"
+  paper-night: "#0f1420"
   panel: "#ffffff"
-  panel-night: "#121a33"
+  panel-night: "#151b29"
   raised: "#eef2f8"
-  raised-night: "#1b2546"
+  raised-night: "#1d2434"
   ink: "#141a2b"
-  ink-night: "#eef2ff"
+  ink-night: "#eef1f8"
   ink-soft: "#4a5263"
-  ink-soft-night: "#b3bdd6"
+  ink-soft-night: "#b6bdcc"
   ink-faint: "#5d6576"
-  ink-faint-night: "#97a2bf"
+  ink-faint-night: "#99a2b4"
   rule: "#dfe5ee"
-  rule-night: "#26315a"
+  rule-night: "#262e40"
   rule-strong: "#b7c2d3"
-  rule-strong-night: "#34427a"
+  rule-strong-night: "#3a4357"
   accent: "#2340c8"
   accent-night: "#3d5be8"
   accent-ink: "#2340c8"
-  accent-ink-night: "#9fb0ff"
+  accent-ink-night: "#a3b2ff"
   accent-tint: "#e9edff"
-  accent-tint-night: "#1d2a5c"
+  accent-tint-night: "#1c2650"
   hi: "#ffe14d"
   hi-night: "#ffe14d"
   cut: "#d93a2f"
@@ -31,21 +31,21 @@ colors:
   cut-ink: "#b8281e"
   cut-ink-night: "#ff8a7f"
   cut-tint: "#fdecea"
-  cut-tint-night: "#3a1620"
+  cut-tint-night: "#33181f"
   ply: "#b5763a"
   ply-night: "#d9a066"
   ply-tint: "#f6e6d2"
-  ply-tint-night: "#2a2418"
+  ply-tint-night: "#282219"
   ply-deep: "#8a5a25"
   ply-deep-night: "#d9a066"
   grid: "#dcecf7"
-  grid-night: "#172245"
+  grid-night: "#1a2232"
   grid-major: "#b3d6ee"
-  grid-major-night: "#24356a"
+  grid-major-night: "#283349"
   sheet: "#ffffff"
-  sheet-night: "#121a33"
+  sheet-night: "#151b29"
   sheet-edge: "#b7c2d3"
-  sheet-edge-night: "#34427a"
+  sheet-edge-night: "#3a4357"
   piece: "#f1d4ae"
   piece-night: "#d9a066"
   piece-edge: "#9b6430"
@@ -53,71 +53,71 @@ colors:
   piece-label: "#3a2410"
   piece-label-night: "#1a1206"
   piece-dims: "#6b4b22"
-  piece-dims-night: "#eef2ff"
+  piece-dims-night: "#eef1f8"
   grain: "#9b6430"
   grain-night: "#6b4b22"
   mark: "#d93a2f"
   mark-night: "#ff6b5e"
   stage-near: "#fbfdff"
-  stage-near-night: "#142047"
+  stage-near-night: "#161d2d"
   stage-far: "#eaf1f8"
-  stage-far-night: "#0c1226"
+  stage-far-night: "#0f1420"
 typography:
   display:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.5rem"
     fontWeight: 800
     lineHeight: 1.333
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.022em"
   display-sm:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 800
     lineHeight: 1.556
     letterSpacing: "-0.01em"
   readout:
-    fontFamily: "Atkinson Hyperlegible Mono, ui-monospace, SFMono-Regular, monospace"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "44px"
     fontWeight: 700
     lineHeight: 1
-    fontFeature: "tnum"
+    fontFeature: "tnum, zero, cv05, cv08"
   title:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "16px"
     fontWeight: 700
     lineHeight: 1.375
   body:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.5
   body-sm:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "14px"
     fontWeight: 400
     lineHeight: 1.625
   label:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "13px"
     fontWeight: 700
     lineHeight: 1.4
   caption:
-    fontFamily: "Atkinson Hyperlegible Next, ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "12px"
     fontWeight: 600
     lineHeight: 1.333
   number:
-    fontFamily: "Atkinson Hyperlegible Mono, ui-monospace, SFMono-Regular, monospace"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "15px"
     fontWeight: 700
     lineHeight: 1.5
-    fontFeature: "tnum"
+    fontFeature: "tnum, zero, cv05, cv08"
   number-sm:
-    fontFamily: "Atkinson Hyperlegible Mono, ui-monospace, SFMono-Regular, monospace"
+    fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif"
     fontSize: "12px"
     fontWeight: 400
     lineHeight: 1.333
-    fontFeature: "tnum"
+    fontFeature: "tnum, zero, cv05, cv08"
 rounded:
   md: "6px"
   lg: "8px"
@@ -203,7 +203,7 @@ components:
 
 **Creative North Star: "Cuaderno de cuadro"**
 
-The planner is a maker's grid notebook. Every measurement sits on one true-scale cuadrícula, and whatever the maker is working on right now (the active step, the hovered piece, the size being dragged) is swept with a yellow highlighter. The page is notebook-white paper in daylight and ink-blue paper at night. Both themes are first-class. The paper palette is the base and the one print inherits; the night notebook overrides it on screen only.
+The planner is a maker's grid notebook. Every measurement sits on one true-scale cuadrícula, and whatever the maker is working on right now (the active step, the hovered piece, the size being dragged) is swept with a yellow highlighter. The page is notebook-white paper in daylight and blue-black ink paper at night: dark and quiet, never the glowing navy of a CAD stage. Both themes are first-class. The paper palette is the base and the one print inherits; the night notebook overrides it on screen only.
 
 The density is that of a well-kept notebook page. A 340 px rail of grouped controls sits beside a large stage, cut and order tables run edge to edge in ruled modules, and hairlines (1 px) do the structuring. Ink colours carry meaning and nothing is decorative: ballpoint blue is what you chose or can press, margin red is where you cut or what is wrong, the highlighter is where you are. Numbers are the product, so every measurement is set in a tabular monospace and is the most legible thing on the screen.
 
@@ -213,7 +213,7 @@ The world rejects the category default (a dark CAD stage beside a neutral settin
 - Two paper palettes (day and night) on one set of tokens. Components read tokens and never branch on theme.
 - The true-scale cuadrícula (20 px cells, a stronger line every 100 px) on work stages only.
 - Three inks with fixed jobs: ballpoint (accent), margin red (cut), highlighter (hi).
-- Atkinson Hyperlegible Next for words and Atkinson Hyperlegible Mono for numbers.
+- One family, Inter, with its legibility alternates; measurements set in tabular figures with a slashed zero.
 - Hairline rules, 6–16 px radii, and low, soft shadows only on things that float.
 
 ## Colors
@@ -257,23 +257,21 @@ A cool notebook palette: blue-white paper, graphite-blue ink, and three pen colo
 
 ## Typography
 
-**Display Font:** Atkinson Hyperlegible Next (with ui-sans-serif, system-ui)
-**Body Font:** Atkinson Hyperlegible Next (with ui-sans-serif, system-ui)
-**Label/Mono Font:** Atkinson Hyperlegible Mono (with ui-monospace, SFMono-Regular)
+**Display, body and numbers:** Inter (with ui-sans-serif, system-ui), loaded as a variable font with its optical-size axis.
 
-**Character:** One family built for legibility in poor conditions, set heavy for headings and plain for reading. Its mono twin carries every number with tabular figures so measurement columns line up. The voice is a clear hand in a notebook, never a drafting stencil.
+**Character:** One family, set heavy and a little tight for headings and plain for reading. Two legibility alternates are always on (`cv05` tailed l, `cv08` serifed I) so l, I and 1 never blur in a piece list. Figures are tabular everywhere. The `font-mono` class still marks a measurement, but it no longer swaps the face: it adds a slashed zero so 0 and O stay apart in piece codes. The wordmark keeps the brand kit's outlined lettering and is drawn as a path, not set in the UI face. The voice is a clear hand in a notebook, never a drafting stencil.
 
 ### Hierarchy
-- **Display** (800, 24px, 1.33, -0.01em, sentence case): view headings such as Plan de corte and Pedido para maderería. At 18px it sets the wordmark. Print headings run 30px.
-- **Readout** (Mono 700, 44px, 1): the live number that rides over the stage while a size is dragged, in ballpoint ink with its unit in pencil at 18px.
+- **Display** (800, 24px, 1.33, -0.022em, sentence case): view headings such as Plan de corte and Pedido para maderería. Print headings run 30px.
+- **Readout** (700, 44px, 1, tabular): the live number that rides over the stage while a size is dragged, in ballpoint ink with its unit in pencil at 18px.
 - **Title** (700, 16px, 1.375): step titles and template names (15px in the rail).
 - **Body** (400, 15px, 1.5): the base size. Descriptions use 14px at a relaxed 1.625.
 - **Label** (600–700, 13px): field labels, `.rule-label` section heads (bold, pencil, followed by a hairline to the edge) and chip text.
 - **Caption** (600, 12px): summary labels, phone tab labels and units.
-- **Numbers** (Mono, 12–20px, tabular): table measurements at 12px, editable values at 15px bold, summary figures at 18–20px bold.
+- **Numbers** (`font-mono`: tabular, slashed zero, 12–20px): table measurements at 12px, editable values at 15px bold, summary figures at 18–20px bold.
 
 ### Named Rules
-**The Mono-Means-Measurement Rule.** The mono face is only for numbers, measurements and piece codes (L1, A2). Words, sentences and labels are set in the sans, even when they sit in a numeric table.
+**The Measurement Rule.** The `font-mono` class is only for numbers, measurements and piece codes (L1, A2). Words, sentences and labels never take it, even when they sit in a numeric table.
 
 **The Sentence-Case Rule.** No uppercase tracked labels anywhere. Hierarchy comes from weight and size, and section heads are bold sentence case followed by a hairline.
 
@@ -283,6 +281,7 @@ A cool notebook palette: blue-white paper, graphite-blue ink, and three pen colo
 
 - **Desktop (lg, 1024px and up):** a 64px sticky top bar holds the mark, the Madera|Metal segmented control, the four view tabs, the theme toggle and Exportar PDF. Below it, a 340px rail with 20px padding scrolls independently beside a stage that fills the rest of the viewport (`h-dvh`). The rail is separated from the stage by the 1 px margin-red rule.
 - **Phone:** the top bar stays. The Diseño stage takes 58dvh with the rail's controls below it. The view tabs move to a 64px bottom bar with 20px line icons above their labels, padded for the safe area. Templates become a horizontally scrolling chip row.
+- **Template list:** on a desk the templates are written on the rail's ruled lines (hairline dividers, no boxes): a bare line-drawn thumbnail, the name and its description. The chosen one turns ballpoint ink and gets a ballpoint tick at the right. On phones they stay a chip row, and the chosen chip takes the ballpoint wash.
 - **Rhythm:** a 4px base. Control gaps run 6–8px, field stacks 20px, and section breaks 28px. A summary strip of four ruled cells closes the design stage.
 - **The cuadrícula:** 20px minor cells with a major line every 100px, on work stages only (cut sheets and bar plans). In 3D the floor grid is a true 100 mm square, labelled by a scale bar ("Cuadro de 100 mm").
 - **Tables:** order and cut tables run edge to edge in ruled rows (1px `rule`, a `rule-strong` head line) with right-aligned numeric columns. Each piece row carries a 4px true-scale length bar.
@@ -348,7 +347,7 @@ Sheets lie on the cuadrícula with the Sheet shadow. Pieces are drawn in the woo
 - **Do** use ballpoint (`accent`) for selection and primary actions, and `accent-ink` whenever that blue is text.
 - **Do** use the highlighter (`hi`) only for the active step or piece and the dimension being dragged, always under #141a2b text.
 - **Do** keep margin red (`cut`) for cuts, errors and invalid states. The 1 px rail margin rule is the one structural use.
-- **Do** set every number and measurement in Atkinson Hyperlegible Mono with tabular figures.
+- **Do** mark every number and measurement with `font-mono` (tabular figures, slashed zero).
 - **Do** put the cuadrícula (`.stage-grid`) on work stages only: cut sheets, bar plans and the 3D floor.
 - **Do** add every new colour token to both the paper `@theme` block and the night override, and mirror it in Viewer3D's PALETTE if WebGL needs it.
 - **Do** keep screen text at 11px or larger and every text pair at 5:1 or better in both themes.
@@ -357,7 +356,7 @@ Sheets lie on the cuadrícula with the Sheet shadow. Pieces are drawn in the woo
 - **Don't** use hard offset shadows; shadows stay soft, short and graphite-tinted.
 - **Don't** put coloured side stripes on callouts; errors use a full red wash with a line icon.
 - **Don't** use uppercase tracked labels or eyebrow kickers; section heads are bold sentence case with a hairline.
-- **Don't** set words or sentences in the mono face.
+- **Don't** put `font-mono` on words or sentences.
 - **Don't** use red for focus, selection or emphasis.
 - **Don't** colour text with a fill token (`accent`, `cut`); use the `-ink` token.
 - **Don't** lay the cuadrícula behind forms, lists or chrome.

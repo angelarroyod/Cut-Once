@@ -24,7 +24,7 @@
       "paper-night": {
         "role": "neutral",
         "displayName": "Notebook Paper (night)",
-        "canonical": "#0c1226",
+        "canonical": "#0f1420",
         "oklch": "oklch(18.8% 0.042 269.5)",
         "theme": "night",
         "tonalRamp": [
@@ -58,7 +58,7 @@
       "panel-night": {
         "role": "neutral",
         "displayName": "Sheet White (night)",
-        "canonical": "#121a33",
+        "canonical": "#151b29",
         "oklch": "oklch(22.5% 0.050 268.8)",
         "theme": "night",
         "tonalRamp": [
@@ -92,7 +92,7 @@
       "raised-night": {
         "role": "neutral",
         "displayName": "Raised Paper (night)",
-        "canonical": "#1b2546",
+        "canonical": "#1d2434",
         "oklch": "oklch(27.4% 0.063 269.3)",
         "theme": "night",
         "tonalRamp": [
@@ -126,7 +126,7 @@
       "ink-night": {
         "role": "neutral",
         "displayName": "Graphite Ink (night)",
-        "canonical": "#eef2ff",
+        "canonical": "#eef1f8",
         "oklch": "oklch(96.2% 0.018 272.3)",
         "theme": "night",
         "tonalRamp": [
@@ -160,7 +160,7 @@
       "ink-soft-night": {
         "role": "neutral",
         "displayName": "Pencil (night)",
-        "canonical": "#b3bdd6",
+        "canonical": "#b6bdcc",
         "oklch": "oklch(79.9% 0.037 268.2)",
         "theme": "night",
         "tonalRamp": [
@@ -194,7 +194,7 @@
       "ink-faint-night": {
         "role": "neutral",
         "displayName": "Faint Pencil (night)",
-        "canonical": "#97a2bf",
+        "canonical": "#99a2b4",
         "oklch": "oklch(71.3% 0.044 268.9)",
         "theme": "night",
         "tonalRamp": [
@@ -228,7 +228,7 @@
       "rule-night": {
         "role": "neutral",
         "displayName": "Hairline (night)",
-        "canonical": "#26315a",
+        "canonical": "#262e40",
         "oklch": "oklch(32.6% 0.074 270.5)",
         "theme": "night",
         "tonalRamp": [
@@ -262,7 +262,7 @@
       "rule-strong-night": {
         "role": "neutral",
         "displayName": "Ruled Line (night)",
-        "canonical": "#34427a",
+        "canonical": "#3a4357",
         "oklch": "oklch(39.7% 0.096 270.9)",
         "theme": "night",
         "tonalRamp": [
@@ -330,7 +330,7 @@
       "accent-ink-night": {
         "role": "primary",
         "displayName": "Ballpoint Ink (night)",
-        "canonical": "#9fb0ff",
+        "canonical": "#a3b2ff",
         "oklch": "oklch(77.5% 0.115 274.1)",
         "theme": "night",
         "tonalRamp": [
@@ -364,7 +364,7 @@
       "accent-tint-night": {
         "role": "primary",
         "displayName": "Ballpoint Wash (night)",
-        "canonical": "#1d2a5c",
+        "canonical": "#1c2650",
         "oklch": "oklch(30.4% 0.091 269.4)",
         "theme": "night",
         "tonalRamp": [
@@ -500,7 +500,7 @@
       "cut-tint-night": {
         "role": "tertiary",
         "displayName": "Margin Red Wash (night)",
-        "canonical": "#3a1620",
+        "canonical": "#33181f",
         "oklch": "oklch(25.8% 0.058 4.5)",
         "theme": "night",
         "tonalRamp": [
@@ -568,7 +568,7 @@
       "ply-tint-night": {
         "role": "neutral",
         "displayName": "Plywood Wash (night)",
-        "canonical": "#2a2418",
+        "canonical": "#282219",
         "oklch": "oklch(26.3% 0.023 84.3)",
         "theme": "night",
         "tonalRamp": [
@@ -636,7 +636,7 @@
       "grid-night": {
         "role": "neutral",
         "displayName": "Cuadrícula (night)",
-        "canonical": "#172245",
+        "canonical": "#1a2232",
         "oklch": "oklch(26.3% 0.067 268.4)",
         "theme": "night",
         "tonalRamp": [
@@ -670,7 +670,7 @@
       "grid-major-night": {
         "role": "neutral",
         "displayName": "Cuadrícula Major Line (night)",
-        "canonical": "#24356a",
+        "canonical": "#283349",
         "oklch": "oklch(34.5% 0.095 267.8)",
         "theme": "night",
         "tonalRamp": [
@@ -704,7 +704,7 @@
       "sheet-night": {
         "role": "neutral",
         "displayName": "Diagram Sheet (night)",
-        "canonical": "#121a33",
+        "canonical": "#151b29",
         "oklch": "oklch(22.5% 0.050 268.8)",
         "theme": "night",
         "tonalRamp": [
@@ -738,7 +738,7 @@
       "sheet-edge-night": {
         "role": "neutral",
         "displayName": "Diagram Sheet Edge (night)",
-        "canonical": "#34427a",
+        "canonical": "#3a4357",
         "oklch": "oklch(39.7% 0.096 270.9)",
         "theme": "night",
         "tonalRamp": [
@@ -874,7 +874,7 @@
       "piece-dims-night": {
         "role": "neutral",
         "displayName": "Diagram Piece Dimensions (night)",
-        "canonical": "#eef2ff",
+        "canonical": "#eef1f8",
         "oklch": "oklch(96.2% 0.018 272.3)",
         "theme": "night",
         "tonalRamp": [
@@ -976,7 +976,7 @@
       "stage-near-night": {
         "role": "neutral",
         "displayName": "Stage Light Near (night)",
-        "canonical": "#142047",
+        "canonical": "#161d2d",
         "oklch": "oklch(25.7% 0.075 268.0)",
         "theme": "night",
         "tonalRamp": [
@@ -1010,7 +1010,7 @@
       "stage-far-night": {
         "role": "neutral",
         "displayName": "Stage Light Far (night)",
-        "canonical": "#0c1226",
+        "canonical": "#0f1420",
         "oklch": "oklch(18.8% 0.042 269.5)",
         "theme": "night",
         "tonalRamp": [
@@ -1144,7 +1144,7 @@
       "refersTo": "button-primary",
       "description": "One primary action per bar (Exportar PDF).",
       "html": "<button class=\"ds-btn-primary\"><svg viewBox=\"0 0 20 20\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 3v9m0 0-3.5-3.5M10 12l3.5-3.5M4 14.5V17h12v-2.5\"/></svg>Exportar PDF</button>",
-      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--color-accent); color: #fff; font: 700 14px/1 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; box-shadow: 0 1px 2px rgb(20 26 43 / 0.2); cursor: pointer; transition: filter .15s; } .ds-btn-primary:hover { filter: brightness(1.1); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; border: 0; border-radius: 8px; background: var(--color-accent); color: #fff; font: 700 14px/1 Inter, system-ui, sans-serif; box-shadow: 0 1px 2px rgb(20 26 43 / 0.2); cursor: pointer; transition: filter .15s; } .ds-btn-primary:hover { filter: brightness(1.1); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
     },
     {
       "name": "Quiet Button",
@@ -1152,7 +1152,7 @@
       "refersTo": "button-quiet",
       "description": "Secondary actions in the bar or over the stage (theme toggle, Vista general).",
       "html": "<button class=\"ds-btn-quiet\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 10a6.5 6.5 0 1 0 2-4.7M3.5 3.5v3h3\"/></svg>Vista general</button>",
-      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border: 1px solid var(--color-rule); border-radius: 8px; background: var(--color-panel); color: var(--color-ink-soft); font: 600 14px/1 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; cursor: pointer; transition: color .15s, border-color .15s; } .ds-btn-quiet:hover { border-color: var(--color-rule-strong); color: var(--color-ink); } .ds-btn-quiet:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
+      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border: 1px solid var(--color-rule); border-radius: 8px; background: var(--color-panel); color: var(--color-ink-soft); font: 600 14px/1 Inter, system-ui, sans-serif; cursor: pointer; transition: color .15s, border-color .15s; } .ds-btn-quiet:hover { border-color: var(--color-rule-strong); color: var(--color-ink); } .ds-btn-quiet:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
     },
     {
       "name": "Option Chips",
@@ -1160,7 +1160,7 @@
       "refersTo": "chip-selected",
       "description": "Select params; the chosen option takes ballpoint.",
       "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\"><span class=\"ds-sw\" style=\"background:#d9a066\"></span>Pino 18 mm</button><button class=\"ds-chip\" aria-pressed=\"false\"><span class=\"ds-sw\" style=\"background:#ffffff\"></span>Melamina 16 mm</button></div>",
-      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; } .ds-chip { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border: 1px solid var(--color-rule); border-radius: 8px; background: transparent; color: var(--color-ink-soft); font: 600 13px/1 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; cursor: pointer; transition: color .15s, border-color .15s, background .15s; } .ds-chip:hover { border-color: var(--color-rule-strong); color: var(--color-ink); } .ds-chip[aria-pressed=\"true\"] { border-color: var(--color-accent); background: var(--color-accent-tint); color: var(--color-accent-ink); } .ds-chip:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-sw { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px rgb(20 26 43 / .25); }"
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 6px; } .ds-chip { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px; border: 1px solid var(--color-rule); border-radius: 8px; background: transparent; color: var(--color-ink-soft); font: 600 13px/1 Inter, system-ui, sans-serif; cursor: pointer; transition: color .15s, border-color .15s, background .15s; } .ds-chip:hover { border-color: var(--color-rule-strong); color: var(--color-ink); } .ds-chip[aria-pressed=\"true\"] { border-color: var(--color-accent); background: var(--color-accent-tint); color: var(--color-accent-ink); } .ds-chip:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-sw { width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 1px rgb(20 26 43 / .25); }"
     },
     {
       "name": "Size Field",
@@ -1168,7 +1168,7 @@
       "refersTo": "input-number",
       "description": "Label, editable mono value and unit, over the ballpoint-filled slider and its bounds.",
       "html": "<div class=\"ds-field\"><div class=\"ds-row\"><label for=\"ds-w\">Ancho</label><span class=\"ds-well\"><input id=\"ds-w\" type=\"number\" value=\"800\"><span class=\"ds-unit\">mm</span></span></div><input class=\"ds-range\" type=\"range\" min=\"400\" max=\"1200\" value=\"800\" style=\"--fill:50%\" aria-label=\"Ancho\"><div class=\"ds-bounds\"><span>400</span><span>1200</span></div></div>",
-      "css": ".ds-field { width: 280px; font-family: \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: var(--color-ink); } .ds-row { display: flex; align-items: center; justify-content: space-between; } .ds-row label { font-size: 14px; font-weight: 600; } .ds-well { display: inline-flex; align-items: baseline; gap: 4px; padding: 0 8px; border: 1px solid var(--color-rule); border-radius: 8px; background: var(--color-raised); } .ds-well:focus-within { border-color: var(--color-accent); } .ds-well input { width: 64px; height: 36px; border: 0; background: transparent; text-align: right; font: 700 15px \"Atkinson Hyperlegible Mono\", ui-monospace, monospace; font-variant-numeric: tabular-nums; color: var(--color-accent-ink); outline: none; -moz-appearance: textfield; appearance: textfield; } .ds-unit { font-size: 12px; color: var(--color-ink-faint); } .ds-range { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; margin: 6px 0 0; background: transparent; } .ds-range::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--color-accent) var(--fill), var(--color-rule) var(--fill)); } .ds-range::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -8px; border-radius: 50%; border: 2px solid var(--color-accent); background: var(--color-panel); box-shadow: 0 1px 3px rgb(20 26 43 / .25); transition: transform .15s ease; } .ds-range:active::-webkit-slider-thumb { transform: scale(1.15); } .ds-range:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-bounds { display: flex; justify-content: space-between; font: 11px \"Atkinson Hyperlegible Mono\", ui-monospace, monospace; color: var(--color-ink-faint); }"
+      "css": ".ds-field { width: 280px; font-family: Inter, system-ui, sans-serif; color: var(--color-ink); } .ds-row { display: flex; align-items: center; justify-content: space-between; } .ds-row label { font-size: 14px; font-weight: 600; } .ds-well { display: inline-flex; align-items: baseline; gap: 4px; padding: 0 8px; border: 1px solid var(--color-rule); border-radius: 8px; background: var(--color-raised); } .ds-well:focus-within { border-color: var(--color-accent); } .ds-well input { width: 64px; height: 36px; border: 0; background: transparent; text-align: right; font: 700 15px Inter, system-ui, sans-serif; font-feature-settings: \"tnum\", \"zero\", \"cv05\", \"cv08\"; color: var(--color-accent-ink); outline: none; -moz-appearance: textfield; appearance: textfield; } .ds-unit { font-size: 12px; color: var(--color-ink-faint); } .ds-range { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; margin: 6px 0 0; background: transparent; } .ds-range::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: linear-gradient(to right, var(--color-accent) var(--fill), var(--color-rule) var(--fill)); } .ds-range::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -8px; border-radius: 50%; border: 2px solid var(--color-accent); background: var(--color-panel); box-shadow: 0 1px 3px rgb(20 26 43 / .25); transition: transform .15s ease; } .ds-range:active::-webkit-slider-thumb { transform: scale(1.15); } .ds-range:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; } .ds-bounds { display: flex; justify-content: space-between; font: 11px Inter, system-ui, sans-serif; color: var(--color-ink-faint); }"
     },
     {
       "name": "Top Bar Navigation",
@@ -1176,7 +1176,7 @@
       "refersTo": "segmented-active",
       "description": "Madera|Metal segmented control and the desktop view tabs with the ballpoint underline.",
       "html": "<nav class=\"ds-bar\"><div class=\"ds-seg\"><button aria-pressed=\"true\">Madera</button><button aria-pressed=\"false\">Metal</button></div><div class=\"ds-tabs\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\">Diseño</button><button role=\"tab\" aria-selected=\"false\">Cortes</button><button role=\"tab\" aria-selected=\"false\">Pasos</button><button role=\"tab\" aria-selected=\"false\">Pedido</button></div></nav>",
-      "css": ".ds-bar { display: flex; align-items: center; gap: 28px; height: 64px; padding: 0 24px; border-bottom: 1px solid var(--color-rule); background: var(--color-panel); font-family: \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-seg { display: flex; padding: 4px; border-radius: 12px; background: var(--color-raised); } .ds-seg button { height: 36px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-soft); font-size: 14px; font-weight: 700; cursor: pointer; transition: color .15s; } .ds-seg button:hover { color: var(--color-ink); } .ds-seg button[aria-pressed=\"true\"] { background: var(--color-panel); color: var(--color-ink); box-shadow: 0 1px 3px rgb(20 26 43 / .16); } .ds-tabs { display: flex; gap: 28px; align-self: stretch; } .ds-tabs button { border: 0; border-bottom: 2px solid transparent; background: none; color: var(--color-ink-soft); font-size: 15px; font-weight: 700; cursor: pointer; transition: color .15s; } .ds-tabs button:hover { color: var(--color-ink); } .ds-tabs button[aria-selected=\"true\"] { border-bottom-color: var(--color-accent); color: var(--color-ink); } .ds-bar button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
+      "css": ".ds-bar { display: flex; align-items: center; gap: 28px; height: 64px; padding: 0 24px; border-bottom: 1px solid var(--color-rule); background: var(--color-panel); font-family: Inter, system-ui, sans-serif; } .ds-seg { display: flex; padding: 4px; border-radius: 12px; background: var(--color-raised); } .ds-seg button { height: 36px; padding: 0 12px; border: 0; border-radius: 8px; background: transparent; color: var(--color-ink-soft); font-size: 14px; font-weight: 700; cursor: pointer; transition: color .15s; } .ds-seg button:hover { color: var(--color-ink); } .ds-seg button[aria-pressed=\"true\"] { background: var(--color-panel); color: var(--color-ink); box-shadow: 0 1px 3px rgb(20 26 43 / .16); } .ds-tabs { display: flex; gap: 28px; align-self: stretch; } .ds-tabs button { border: 0; border-bottom: 2px solid transparent; background: none; color: var(--color-ink-soft); font-size: 15px; font-weight: 700; cursor: pointer; transition: color .15s; } .ds-tabs button:hover { color: var(--color-ink); } .ds-tabs button[aria-selected=\"true\"] { border-bottom-color: var(--color-accent); color: var(--color-ink); } .ds-bar button:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }"
     },
     {
       "name": "Card",
@@ -1184,7 +1184,7 @@
       "refersTo": "card",
       "description": "Sheet-white container with a hairline border, flat at rest, headed by a rule label.",
       "html": "<div class=\"ds-card\"><h3 class=\"ds-rule-label\">Herrajes</h3><p>Bisagra de cazoleta 35 mm: <span class=\"ds-num\">× 4</span></p></div>",
-      "css": ".ds-card { padding: 16px 20px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-panel); color: var(--color-ink); font: 15px/1.5 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; } .ds-card p { margin: 0; } .ds-rule-label { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--color-ink-soft); } .ds-rule-label::after { content: \"\"; flex: 1; height: 1px; background: var(--color-rule); } .ds-num { font-family: \"Atkinson Hyperlegible Mono\", ui-monospace, monospace; font-variant-numeric: tabular-nums; }"
+      "css": ".ds-card { padding: 16px 20px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-panel); color: var(--color-ink); font: 15px/1.5 Inter, system-ui, sans-serif; } .ds-card p { margin: 0; } .ds-rule-label { display: flex; align-items: center; gap: 12px; margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--color-ink-soft); } .ds-rule-label::after { content: \"\"; flex: 1; height: 1px; background: var(--color-rule); } .ds-num { font-family: Inter, system-ui, sans-serif; font-feature-settings: \"tnum\", \"zero\", \"cv05\", \"cv08\"; }"
     },
     {
       "name": "Live Readout",
@@ -1192,7 +1192,7 @@
       "refersTo": "readout",
       "description": "The dragged size riding over the stage at display size.",
       "html": "<div class=\"ds-readout\"><div class=\"ds-rl\">Alto</div><div class=\"ds-rv\">1800<span>mm</span></div></div>",
-      "css": ".ds-readout { display: inline-block; padding: 10px 16px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-panel); box-shadow: 0 2px 8px rgb(20 26 43 / .12); } .ds-rl { font: 600 13px \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: var(--color-ink-soft); } .ds-rv { font: 700 44px/1 \"Atkinson Hyperlegible Mono\", ui-monospace, monospace; font-variant-numeric: tabular-nums; color: var(--color-accent-ink); } .ds-rv span { margin-left: 6px; font-size: 18px; font-weight: 500; color: var(--color-ink-soft); }"
+      "css": ".ds-readout { display: inline-block; padding: 10px 16px; border: 1px solid var(--color-rule); border-radius: 12px; background: var(--color-panel); box-shadow: 0 2px 8px rgb(20 26 43 / .12); } .ds-rl { font: 600 13px Inter, system-ui, sans-serif; color: var(--color-ink-soft); } .ds-rv { font: 700 44px/1 Inter, system-ui, sans-serif; font-feature-settings: \"tnum\", \"zero\", \"cv05\", \"cv08\"; color: var(--color-accent-ink); } .ds-rv span { margin-left: 6px; font-size: 18px; font-weight: 500; color: var(--color-ink-soft); }"
     },
     {
       "name": "Active Step",
@@ -1200,7 +1200,7 @@
       "refersTo": "step-marker-active",
       "description": "Numbered marker on the step rule; the active title swept with the highlighter.",
       "html": "<div class=\"ds-step\"><span class=\"ds-mk\">3</span><div class=\"ds-sc\"><div class=\"ds-st\"><span class=\"ds-hi\">Atornilla los costados a la base</span></div><div class=\"ds-sd\">Pre-taladra cada costado y atorníllalo desde abajo.</div></div></div>",
-      "css": ".ds-step { display: flex; gap: 12px; font-family: \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: var(--color-ink); } .ds-mk { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 30px; height: 30px; margin-top: 10px; border-radius: 50%; background: var(--color-accent); color: #fff; font: 700 13px \"Atkinson Hyperlegible Mono\", ui-monospace, monospace; } .ds-sc { flex: 1; padding: 12px; border-radius: 12px; background: var(--color-accent-tint); } .ds-st { font-size: 16px; font-weight: 700; line-height: 1.375; } .ds-hi { color: #141a2b; background-image: linear-gradient(transparent 52%, var(--color-hi) 52%, var(--color-hi) 90%, transparent 90%); -webkit-box-decoration-break: clone; box-decoration-break: clone; } .ds-sd { margin-top: 4px; font-size: 14px; line-height: 1.625; color: var(--color-ink-soft); }"
+      "css": ".ds-step { display: flex; gap: 12px; font-family: Inter, system-ui, sans-serif; color: var(--color-ink); } .ds-mk { display: flex; flex-shrink: 0; align-items: center; justify-content: center; width: 30px; height: 30px; margin-top: 10px; border-radius: 50%; background: var(--color-accent); color: #fff; font: 700 13px Inter, system-ui, sans-serif; } .ds-sc { flex: 1; padding: 12px; border-radius: 12px; background: var(--color-accent-tint); } .ds-st { font-size: 16px; font-weight: 700; line-height: 1.375; } .ds-hi { color: #141a2b; background-image: linear-gradient(transparent 52%, var(--color-hi) 52%, var(--color-hi) 90%, transparent 90%); -webkit-box-decoration-break: clone; box-decoration-break: clone; } .ds-sd { margin-top: 4px; font-size: 14px; line-height: 1.625; color: var(--color-ink-soft); }"
     },
     {
       "name": "Field Error",
@@ -1208,17 +1208,17 @@
       "refersTo": "input-number-invalid",
       "description": "Message under a field: red ink and a line icon, no side stripe.",
       "html": "<p class=\"ds-err\"><svg viewBox=\"0 0 20 20\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M10 3 18 17H2L10 3ZM10 8v4M10 14.5h.01\"/></svg>El entrepaño excede el claro máximo de este material.</p>",
-      "css": ".ds-err { display: flex; gap: 8px; margin: 0; font: 13px/1.6 \"Atkinson Hyperlegible Next\", system-ui, sans-serif; color: var(--color-cut-ink); } .ds-err svg { flex-shrink: 0; margin-top: 2px; }"
+      "css": ".ds-err { display: flex; gap: 8px; margin: 0; font: 13px/1.6 Inter, system-ui, sans-serif; color: var(--color-cut-ink); } .ds-err svg { flex-shrink: 0; margin-top: 2px; }"
     }
   ],
   "narrative": {
     "northStar": "Cuaderno de cuadro",
-    "overview": "The planner is a maker's grid notebook. Every measurement sits on one true-scale cuadrícula, and whatever the maker is working on right now (the active step, the hovered piece, the size being dragged) is swept with a yellow highlighter. The page is notebook-white paper in daylight and ink-blue paper at night. Both themes are first-class. The paper palette is the base and the one print inherits; the night notebook overrides it on screen only.\n\nThe density is that of a well-kept notebook page. A 340 px rail of grouped controls sits beside a large stage, cut and order tables run edge to edge in ruled modules, and hairlines (1 px) do the structuring. Ink colours carry meaning and nothing is decorative: ballpoint blue is what you chose or can press, margin red is where you cut or what is wrong, the highlighter is where you are. Numbers are the product, so every measurement is set in a tabular monospace and is the most legible thing on the screen.\n\nThe world rejects the category default (a dark CAD stage beside a neutral settings panel) and the \"taller nocturno\" dark-shop costume it replaced: no amber-on-graphite, no condensed uppercase display, no hard red offset shadows.",
+    "overview": "The planner is a maker's grid notebook. Every measurement sits on one true-scale cuadrícula, and whatever the maker is working on right now (the active step, the hovered piece, the size being dragged) is swept with a yellow highlighter. The page is notebook-white paper in daylight and blue-black ink paper at night: dark and quiet, never the glowing navy of a CAD stage. Both themes are first-class. The paper palette is the base and the one print inherits; the night notebook overrides it on screen only.\n\nThe density is that of a well-kept notebook page. A 340 px rail of grouped controls sits beside a large stage, cut and order tables run edge to edge in ruled modules, and hairlines (1 px) do the structuring. Ink colours carry meaning and nothing is decorative: ballpoint blue is what you chose or can press, margin red is where you cut or what is wrong, the highlighter is where you are. Numbers are the product, so every measurement is set in a tabular monospace and is the most legible thing on the screen.\n\nThe world rejects the category default (a dark CAD stage beside a neutral settings panel) and the \"taller nocturno\" dark-shop costume it replaced: no amber-on-graphite, no condensed uppercase display, no hard red offset shadows.",
     "keyCharacteristics": [
       "Two paper palettes (day and night) on one set of tokens. Components read tokens and never branch on theme.",
       "The true-scale cuadrícula (20 px cells, a stronger line every 100 px) on work stages only.",
       "Three inks with fixed jobs: ballpoint (accent), margin red (cut), highlighter (hi).",
-      "Atkinson Hyperlegible Next for words and Atkinson Hyperlegible Mono for numbers.",
+      "One family, Inter, with its legibility alternates; measurements set in tabular figures with a slashed zero.",
       "Hairline rules, 6–16 px radii, and low, soft shadows only on things that float."
     ],
     "rules": [
@@ -1238,8 +1238,8 @@
         "section": "colors"
       },
       {
-        "name": "The Mono-Means-Measurement Rule",
-        "body": "The mono face is only for numbers, measurements and piece codes (L1, A2). Words, sentences and labels are set in the sans, even when they sit in a numeric table.",
+        "name": "The Measurement Rule",
+        "body": "The `font-mono` class is only for numbers, measurements and piece codes (L1, A2). Words, sentences and labels never take it, even when they sit in a numeric table.",
         "section": "typography"
       },
       {
@@ -1262,7 +1262,7 @@
       "Do use ballpoint (`accent`) for selection and primary actions, and `accent-ink` whenever that blue is text.",
       "Do use the highlighter (`hi`) only for the active step or piece and the dimension being dragged, always under #141a2b text.",
       "Do keep margin red (`cut`) for cuts, errors and invalid states. The 1 px rail margin rule is the one structural use.",
-      "Do set every number and measurement in Atkinson Hyperlegible Mono with tabular figures.",
+      "Do mark every number and measurement with `font-mono` (tabular figures, slashed zero).",
       "Do put the cuadrícula (`.stage-grid`) on work stages only: cut sheets, bar plans and the 3D floor.",
       "Do add every new colour token to both the paper `@theme` block and the night override, and mirror it in Viewer3D's PALETTE if WebGL needs it.",
       "Do keep screen text at 11px or larger and every text pair at 5:1 or better in both themes."
@@ -1271,7 +1271,7 @@
       "Don't use hard offset shadows; shadows stay soft, short and graphite-tinted.",
       "Don't put coloured side stripes on callouts; errors use a full red wash with a line icon.",
       "Don't use uppercase tracked labels or eyebrow kickers; section heads are bold sentence case with a hairline.",
-      "Don't set words or sentences in the mono face.",
+      "Don't put `font-mono` on words or sentences.",
       "Don't use red for focus, selection or emphasis.",
       "Don't colour text with a fill token (`accent`, `cut`); use the `-ink` token.",
       "Don't lay the cuadrícula behind forms, lists or chrome.",

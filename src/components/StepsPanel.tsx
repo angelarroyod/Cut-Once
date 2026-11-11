@@ -26,10 +26,11 @@ export function StepsPanel<S extends Step>({
 
   return (
     <div className="flex flex-col lg:h-full lg:flex-row">
-      <div className="relative h-[45dvh] min-w-0 lg:h-auto lg:flex-1">{viewer(step)}</div>
+      {/* On a phone the model stays pinned under the top bar, so a step tapped far down the list still shows in 3D. */}
+      <div className="sticky top-16 z-20 h-[40dvh] min-w-0 lg:static lg:h-auto lg:flex-1">{viewer(step)}</div>
 
       <aside className="flex flex-col border-t border-rule bg-panel lg:w-[24rem] lg:shrink-0 lg:border-l lg:border-t-0">
-        <div className="sticky top-16 z-10 flex items-center justify-between gap-3 border-b border-rule bg-panel px-5 py-4 lg:static">
+        <div className="sticky top-[calc(4rem+40dvh)] z-20 flex items-center justify-between gap-3 border-b border-rule bg-panel px-5 py-3 lg:static lg:py-4">
           <div>
             <h2 className="display text-xl">Pasos de armado</h2>
             <p className="text-[13px] text-ink-soft">
@@ -56,7 +57,8 @@ export function StepsPanel<S extends Step>({
           </div>
         </div>
 
-        <ol className="flex-1 px-4 py-4 lg:overflow-y-auto">
+        {/* isolate: the step markers' z-index stays inside the list, under the sticky bars */}
+        <ol className="isolate flex-1 px-4 py-4 lg:overflow-y-auto">
           {steps.map((st, i) => {
             const active = st.order === activeStep;
             const last = i === steps.length - 1;
@@ -79,12 +81,13 @@ export function StepsPanel<S extends Step>({
                     active ? 'bg-accent-tint' : 'hover:bg-raised'
                   }`}
                 >
-                  <div className="text-[16px] font-bold leading-snug">
+                  {/* spans only: a button may hold phrasing content, not divs */}
+                  <span className="block text-[16px] font-bold leading-snug">
                     <span className={active ? 'hi' : ''}>{st.title}</span>
-                  </div>
-                  <div className="mt-1 text-sm leading-relaxed text-ink-soft">{st.description}</div>
+                  </span>
+                  <span className="mt-1 block text-sm leading-relaxed text-ink-soft">{st.description}</span>
                   {st.panelRefs.length > 0 && (
-                    <div className="mt-2.5 flex flex-wrap gap-1">
+                    <span className="mt-2.5 flex flex-wrap gap-1">
                       {st.panelRefs.map((id) => (
                         <span
                           key={id}
@@ -95,7 +98,7 @@ export function StepsPanel<S extends Step>({
                           {labels[id] ?? id}
                         </span>
                       ))}
-                    </div>
+                    </span>
                   )}
                   {detail?.(st)}
                 </button>

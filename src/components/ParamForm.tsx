@@ -124,7 +124,7 @@ function Field({
             {spec.label}
           </label>
           <span
-            className={`flex items-baseline gap-1 rounded-lg border px-2 focus-within:border-accent ${
+            className={`flex items-baseline gap-1 rounded-lg border px-2 focus-within:border-accent focus-within:ring-1 focus-within:ring-accent ${
               hasError ? 'border-cut/50 bg-cut-tint' : 'border-rule bg-raised'
             }`}
           >
@@ -140,7 +140,8 @@ function Field({
               onChange={(e) => setDraft(e.target.value)}
               onBlur={commit}
               onKeyDown={(e) => e.key === 'Enter' && commit()}
-              className={`h-9 w-16 bg-transparent text-right font-mono text-[15px] font-bold outline-none ${
+              // 16px under lg: iOS Safari zooms the page into any smaller field on focus
+              className={`h-9 w-16 bg-transparent text-right font-mono text-base font-bold outline-none lg:text-[15px] ${
                 hasError ? 'text-cut-ink' : 'text-accent-ink'
               }`}
             />

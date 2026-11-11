@@ -6,6 +6,7 @@ import { WELD_REF, type Tube, type TubeEnd, type TubePlacement } from '../engine
 import type { Fitting, Placement, Step, Vec3 } from '../engine/types.ts';
 import { useAppStore, type Theme } from '../state/store.ts';
 import { beadGeometry, capGeometry, tubeGeometry } from './weld/tubeMesh.ts';
+import { StalePill } from './StalePill.tsx';
 
 const EXPLODE_FACTOR = 1.6; // panels move away from the centroid by this factor
 const HOME: Vec3 = [1600, 1400, 2000]; // camera start before framing; its direction is kept
@@ -54,18 +55,18 @@ const PALETTE: Record<Theme, {
     base: '#d9a066',
     edge: '#3d2410',
     highlight: '#ffe14d',
-    ink: '#9fb0ff',
-    ghost: '#33467f',
-    ghostEdge: '#7f97e0',
+    ink: '#a3b2ff',
+    ghost: '#2f3a57',
+    ghostEdge: '#8593b8',
     ghostOpacity: 0.3,
     steel: '#b6c0d2',
     plug: '#454b58',
-    sky: '#e3e9ff',
-    ground: '#0c1226',
-    rim: '#9fb0ff',
+    sky: '#e6eaf5',
+    ground: '#0f1420',
+    rim: '#a3b2ff',
     shadow: 0.5,
-    gridCell: '#1d2b55',
-    gridSection: '#2f4687',
+    gridCell: '#1f283b',
+    gridSection: '#33405c',
   },
 };
 
@@ -156,12 +157,10 @@ export function Viewer3D({
   const beadsGhost = highlightIds !== null && !beadsLit;
 
   return (
-    <div
-      className={`relative h-full bg-[radial-gradient(ellipse_at_50%_35%,var(--color-stage-near)_0%,var(--color-stage-far)_100%)] transition-opacity duration-300 ${
-        stale ? 'opacity-45' : ''
-      }`}
-    >
+    <div className="relative h-full bg-[radial-gradient(ellipse_at_50%_35%,var(--color-stage-near)_0%,var(--color-stage-far)_100%)]">
+      {/* only the model dims while stale; the pill and controls over it keep full contrast */}
       <Canvas
+        className={`transition-opacity duration-300 ${stale ? 'opacity-45' : ''}`}
         shadows="soft"
         dpr={[1, 2]}
         gl={{ antialias: true }}
@@ -303,13 +302,7 @@ export function Viewer3D({
         Vista general
       </button>
 
-      {stale && (
-        <div className="pointer-events-none absolute inset-x-0 top-4 flex justify-center px-4">
-          <span className="rounded-full bg-cut-tint px-3.5 py-1.5 text-[13px] font-semibold text-cut-ink shadow-[0_1px_4px_rgb(20_26_43/0.12)]">
-            Corrige los errores para actualizar el modelo
-          </span>
-        </div>
-      )}
+      {stale && <StalePill className="absolute inset-x-0 top-4" />}
     </div>
   );
 }

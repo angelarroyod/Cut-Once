@@ -99,6 +99,7 @@ export default function Measure() {
                     value={value}
                     invalid={bad}
                     accessibilityLabel={spec.label}
+                    unit={spec.unit}
                     onChange={(v) => setParam(spec.key, v)}
                     onActive={(on) => setDragging(on ? spec.key : null)}
                   />

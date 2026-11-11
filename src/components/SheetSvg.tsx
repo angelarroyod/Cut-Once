@@ -13,7 +13,7 @@ interface Props {
 
 const BAND_INSET = 7; // mm; banded edges are 14 mm lines that stay inside the piece
 
-const MONO = 'Atkinson Hyperlegible Mono, ui-monospace, monospace';
+const MONO = 'Inter, ui-sans-serif, system-ui, sans-serif'; // numbers set with tabular figures by the root
 
 /** One sheet as SVG, 1 SVG unit = 1 mm, sized by its stock. Shared by screen view and print report. */
 export function SheetSvg({ sheet, labels, edges, className, highlight = null, onPiece }: Props) {

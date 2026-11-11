@@ -1,6 +1,7 @@
 import * as Haptics from 'expo-haptics';
-import type { ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import {
+  AccessibilityInfo,
   Pressable,
   StyleSheet,
   Text,
@@ -398,6 +399,10 @@ export function Toast({ message }: { message: string | null }) {
   const insets = useSafeAreaInsets();
   const c = usePalette();
   const s = useStyles();
+  // accessibilityLiveRegion below is Android-only; VoiceOver needs an explicit announcement
+  useEffect(() => {
+    if (message) AccessibilityInfo.announceForAccessibility(message);
+  }, [message]);
   if (!message) return null;
   // 92 clears both bottom bars that host it: the result tabs and the measure CTA
   return (

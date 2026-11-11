@@ -110,7 +110,13 @@ export function Result() {
           <View style={s.tallerBar}>
             <View style={s.tallerDot} />
             <Text style={s.tallerLabel}>Modo taller · pantalla encendida</Text>
-            <Pressable onPress={toggleTaller} style={{ marginLeft: 'auto' }} hitSlop={10} accessibilityRole="button">
+            <Pressable
+              onPress={toggleTaller}
+              style={{ marginLeft: 'auto' }}
+              hitSlop={10}
+              accessibilityRole="button"
+              accessibilityLabel="Salir del modo taller"
+            >
               <Text style={s.tallerLabel}>Salir</Text>
             </Pressable>
           </View>
@@ -149,7 +155,7 @@ export function Result() {
       <Toast message={toast} />
 
       <Modal visible={sheetOpen} transparent animationType="slide" onRequestClose={() => setSheetOpen(false)}>
-        <Pressable style={s.scrim} onPress={() => setSheetOpen(false)} accessibilityLabel="Cerrar" />
+        <Pressable style={s.scrim} onPress={() => setSheetOpen(false)} accessibilityRole="button" accessibilityLabel="Cerrar" />
         <View style={[s.sheet, { paddingBottom: insets.bottom + space.lg }]}>
           <View style={s.grabber} />
           <Display>Compartir</Display>

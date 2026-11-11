@@ -24,7 +24,7 @@ The web and iOS apps use this kit. `public/` and `mobile/assets/images/` hold co
 
 - **Blue on light, two colours on dark.** Yellow on white is 1.3:1 and the board falls apart, so the white and yellow pair only appears on blue or night.
 - **Three kerf widths.** 28 units on the master, 31 on reversed files because light shapes spread on dark, and a separate 16 px drawing with a 2 px kerf on whole pixels.
-- **The wordmark is unmodified Atkinson Hyperlegible Next ExtraBold, outlined.** The app already speaks in it, and the symbol carries the ownable idea. The same weight is used on dark.
+- **The wordmark is unmodified Atkinson Hyperlegible Next ExtraBold, outlined.** The iOS app speaks in it; the web app moved to Inter and draws this wordmark as an outlined path, so the name keeps its lettering. The symbol carries the ownable idea. The same weight is used on dark.
 
 ## Test results
 
