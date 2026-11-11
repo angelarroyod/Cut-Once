@@ -20,6 +20,8 @@ import { useAppStore } from '../../state/store.ts';
 import { StepsPanel } from '../StepsPanel.tsx';
 import { Viewer3D, type Finish } from '../Viewer3D.tsx';
 import { FocusRig, ToolDemo } from './ToolDemo.tsx';
+import { ShareActions } from '../ShareActions.tsx';
+import { STALE_STICKY, StalePill } from '../StalePill.tsx';
 
 /** Paint reads as a satin coat; bare steel as metal. */
 export function finishOf(d: WeldDesign): Finish {
@@ -28,18 +30,8 @@ export function finishOf(d: WeldDesign): Finish {
     : { color: d.finish.hex, metalness: 0.85, roughness: 0.35 };
 }
 
-const MONO = 'Atkinson Hyperlegible Mono, ui-monospace, monospace';
+const MONO = 'Inter, ui-sans-serif, system-ui, sans-serif'; // numbers set with tabular figures by the root
 const DEMO = { cut: 'Corte con disco', grind: 'Esmerilado', tack: 'Punteo', weld: 'Cordón', measure: 'Medición', paint: 'Pintura' } as const;
-
-function StaleBadge() {
-  return (
-    <div className="pointer-events-none absolute inset-x-0 top-4 flex justify-center px-4">
-      <span className="rounded-full bg-cut-tint px-3.5 py-1.5 text-[13px] font-semibold text-cut-ink shadow-[0_1px_4px_rgb(20_26_43/0.12)]">
-        Corrige los errores para actualizar el modelo
-      </span>
-    </div>
-  );
-}
 
 /** Where to set the machine for this tube and process. */
 export function SettingsCard({ design, className = '' }: { design: WeldDesign; className?: string }) {
@@ -192,8 +184,9 @@ export function WeldCuts({ design, stale }: { design: WeldDesign; stale: boolean
   const [lit, setLit] = useState<string | null>(null); // a piece row lights its cuts on every bar
   const longest = Math.max(...design.members.map((m) => m.length));
   return (
-    <div className={`relative bg-paper px-4 py-5 transition-opacity duration-300 lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7 ${stale ? 'opacity-45' : ''}`}>
-      <div className="mx-auto max-w-[1100px]">
+    <div className="relative bg-paper px-4 py-5 lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7">
+      {stale && <StalePill className={STALE_STICKY} />}
+      <div className={`mx-auto max-w-[1100px] transition-opacity duration-300 ${stale ? 'opacity-45' : ''}`}>
         <h2 className="display text-2xl">Plan de cortes</h2>
         <p className="mt-1 text-sm text-ink-soft">
           {design.tube.label} · {bars.length} {bars.length === 1 ? 'tramo' : 'tramos'} de 6.10 m · disco {CUT_KERF} mm
@@ -260,7 +253,6 @@ export function WeldCuts({ design, stale }: { design: WeldDesign; stale: boolean
           </section>
         </div>
       </div>
-      {stale && <StaleBadge />}
     </div>
   );
 }
@@ -315,10 +307,10 @@ export function WeldSteps({ design, stale }: { design: WeldDesign; stale: boolea
       labels={labels}
       viewer={viewer}
       detail={(st) => (
-        <div className="mt-2 border-t border-rule pt-2">
-          <span className="text-xs text-ink-faint">Herramienta</span>
-          <p className="mt-0.5 text-[11px] leading-snug text-ink-soft">{st.tools.map((t) => toolLabel(design, t)).join(' · ')}</p>
-        </div>
+        <span className="mt-2 block border-t border-rule pt-2">
+          <span className="block text-xs font-semibold text-ink-faint">Herramienta</span>
+          <span className="mt-0.5 block text-[13px] leading-snug text-ink-soft">{st.tools.map((t) => toolLabel(design, t)).join(' · ')}</span>
+        </span>
       )}
     />
   );
@@ -329,29 +321,10 @@ export function WeldShopping({ design, title, stale }: { design: WeldDesign; tit
   const bars = useMemo(() => planBars(design.members), [design]);
   const groups = useMemo(() => shoppingList(design, bars), [design, bars]);
   const text = useMemo(() => shoppingText(design, title, bars), [design, title, bars]);
-  const [status, setStatus] = useState<string | null>(null);
-  const canShare = typeof navigator.share === 'function';
-
-  async function share() {
-    try {
-      await navigator.share({ title: `Lista de compras — ${title}`, text });
-    } catch (e) {
-      if (!(e instanceof DOMException && e.name === 'AbortError')) setStatus('No se pudo compartir');
-    }
-  }
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(text);
-      setStatus('Copiado');
-    } catch {
-      setStatus('No se pudo copiar');
-    }
-  }
-
   return (
-    <div className={`relative bg-paper px-4 py-5 transition-opacity lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7 duration-300 ${stale ? 'opacity-40' : ''}`}>
-      <div className="mx-auto max-w-[1200px]">
+    <div className="relative bg-paper px-4 py-5 lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7">
+      {stale && <StalePill className={STALE_STICKY} />}
+      <div className={`mx-auto max-w-[1200px] transition-opacity duration-300 ${stale ? 'opacity-40' : ''}`}>
         <header className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="display text-2xl">Lista de compras</h2>
@@ -359,32 +332,10 @@ export function WeldShopping({ design, title, stale }: { design: WeldDesign; tit
               {title} · ferretería y tienda de aceros
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            {status && (
-              <span role="status" className="text-[13px] font-semibold text-ink-soft">
-                {status}
-              </span>
-            )}
-            {canShare && (
-              <button
-                onClick={share}
-                disabled={stale}
-                className="h-10 rounded-lg bg-accent px-4 text-sm font-bold text-white transition-[filter] hover:brightness-110 disabled:pointer-events-none disabled:opacity-50"
-              >
-                Compartir
-              </button>
-            )}
-            <button
-              onClick={copy}
-              disabled={stale}
-              className="h-10 rounded-lg border border-rule bg-panel px-4 text-sm font-bold text-ink transition-colors hover:border-ink-soft disabled:pointer-events-none disabled:opacity-50"
-            >
-              Copiar
-            </button>
-          </div>
+          <ShareActions title={`Lista de compras — ${title}`} text={text} disabled={stale} />
         </header>
 
-        <div className="mt-8 flex flex-col gap-10 lg:flex-row lg:items-start">
+        <div className="mt-8 flex flex-col gap-10 xl:flex-row xl:items-start">
           <section className="min-w-0 flex-1 space-y-8">
             {groups.map((g) => (
               <div key={g.title}>
@@ -406,7 +357,7 @@ export function WeldShopping({ design, title, stale }: { design: WeldDesign; tit
             ))}
           </section>
 
-          <section className="w-full space-y-8 lg:w-96 lg:shrink-0">
+          <section className="w-full space-y-8 xl:w-96 xl:shrink-0">
             <SettingsCard design={design} />
             <div>
               <h3 className="rule-label">Herramienta</h3>
@@ -433,7 +384,6 @@ export function WeldShopping({ design, title, stale }: { design: WeldDesign; tit
           </section>
         </div>
       </div>
-      {stale && <StaleBadge />}
     </div>
   );
 }

@@ -6,9 +6,11 @@
    never branch. Ballpoint blue marks selection and primary actions, margin red
    is kept for cuts and errors, the highlighter marks the active piece or step. */
 @theme {
-  --font-display: "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Atkinson Hyperlegible Next", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "SFMono-Regular", monospace;
+  /* One family. Measurements keep the font-mono class as "this is a number"; it
+     sets tabular figures and a slashed zero, not a different face. */
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Inter", ui-sans-serif, system-ui, sans-serif;
 
   --color-paper: #f4f7fb;
   --color-panel: #ffffff;
@@ -59,43 +61,43 @@
 /* Unlayered so it beats @theme's own layer. Screen-only: print never sees it. */
 @media screen {
   :root:not([data-theme="light"]) {
-    --color-paper: #0c1226;
-    --color-panel: #121a33;
-    --color-raised: #1b2546;
-    --color-ink: #eef2ff;
-    --color-ink-soft: #b3bdd6;
-    --color-ink-faint: #97a2bf;
-    --color-rule: #26315a;
-    --color-rule-strong: #34427a;
+    --color-paper: #0f1420;
+    --color-panel: #151b29;
+    --color-raised: #1d2434;
+    --color-ink: #eef1f8;
+    --color-ink-soft: #b6bdcc;
+    --color-ink-faint: #99a2b4;
+    --color-rule: #262e40;
+    --color-rule-strong: #3a4357;
 
     --color-accent: #3d5be8;
-    --color-accent-ink: #9fb0ff;
-    --color-accent-tint: #1d2a5c;
+    --color-accent-ink: #a3b2ff;
+    --color-accent-tint: #1c2650;
 
     --color-hi: #ffe14d;
 
     --color-cut: #ff6b5e;
     --color-cut-ink: #ff8a7f;
-    --color-cut-tint: #3a1620;
+    --color-cut-tint: #33181f;
 
     --color-ply: #d9a066;
-    --color-ply-tint: #2a2418;
+    --color-ply-tint: #282219;
     --color-ply-deep: #d9a066;
 
-    --color-grid: #172245;
-    --color-grid-major: #24356a;
+    --color-grid: #1a2232;
+    --color-grid-major: #283349;
 
-    --color-sheet: #121a33;
-    --color-sheet-edge: #34427a;
+    --color-sheet: #151b29;
+    --color-sheet-edge: #3a4357;
     --color-piece: #d9a066;
     --color-piece-edge: #9b6430;
     --color-piece-label: #1a1206;
-    --color-piece-dims: #eef2ff;
+    --color-piece-dims: #eef1f8;
     --color-grain: #6b4b22;
     --color-mark: #ff6b5e;
 
-    --color-stage-near: #142047;
-    --color-stage-far: #0c1226;
+    --color-stage-near: #161d2d;
+    --color-stage-far: #0f1420;
 
     color-scheme: dark;
   }
@@ -107,15 +109,20 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  /* Inter with its legibility alternates: a tailed l and a serifed I, so
+     l, I and 1 never blur together in a piece list. Figures are tabular
+     everywhere because nearly every number on screen is a measurement. */
   body {
     @apply bg-paper font-sans text-ink antialiased;
     font-size: 15px;
     line-height: 1.5;
+    font-feature-settings: "cv05", "cv08", "tnum";
+    font-optical-sizing: auto;
   }
 
-  /* Every number is a measurement: tabular figures so columns line up. */
+  /* A measurement: tabular figures and a slashed zero (0 vs O in piece codes). */
   .font-mono {
-    font-variant-numeric: tabular-nums;
+    font-feature-settings: "cv05", "cv08", "tnum", "zero";
   }
 
   a {
@@ -217,8 +224,9 @@
 
 @layer components {
   /* The display voice: heavy, sentence case, a hair tight. */
+  /* Inter tightens as it grows; the optical size axis does the rest. */
   .display {
-    @apply font-display font-extrabold tracking-[-0.01em];
+    @apply font-display font-extrabold tracking-[-0.022em];
   }
 
   /* Section heading followed by a hairline to the edge. */

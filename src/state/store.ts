@@ -14,9 +14,25 @@ const THEME_KEY = 'planificador.theme';
 
 /** A saved choice wins; otherwise follow the system, since the app is used both at a desk and in daylight. */
 function initialTheme(): Theme {
-  const saved = localStorage.getItem(THEME_KEY);
+  const saved = readTheme();
   if (saved === 'light' || saved === 'dark') return saved;
   return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Storage throws when the browser blocks site data; the theme then just isn't remembered.
+function readTheme(): string | null {
+  try {
+    return localStorage.getItem(THEME_KEY);
+  } catch {
+    return null;
+  }
+}
+function saveTheme(theme: Theme) {
+  try {
+    localStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // not remembered across visits, still applied now
+  }
 }
 
 interface AppState {
@@ -100,7 +116,7 @@ export const useAppStore = create<AppState>()(
       toggleTheme: () =>
         set((s) => {
           const theme: Theme = s.theme === 'dark' ? 'light' : 'dark';
-          localStorage.setItem(THEME_KEY, theme);
+          saveTheme(theme);
           return { theme };
         }),
     }),

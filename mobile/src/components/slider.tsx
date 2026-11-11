@@ -18,6 +18,8 @@ interface Props {
   /** Fires true on touch-down and false on release, so the caller can highlight what is being dragged. */
   onActive?: (active: boolean) => void;
   accessibilityLabel?: string;
+  /** Read after the value by VoiceOver ("860 mm"). */
+  unit?: string;
 }
 
 /**
@@ -26,7 +28,7 @@ interface Props {
  * Hand-rolled rather than @expo/ui's native Slider because a SwiftUI slider
  * cannot be restyled this far.
  */
-export function Slider({ min, max, step, value, invalid, onChange, onActive, accessibilityLabel }: Props) {
+export function Slider({ min, max, step, value, invalid, onChange, onActive, accessibilityLabel, unit }: Props) {
   const s = useStyles();
   const [width, setWidth] = useState(0);
   const [dragging, setDragging] = useState(false);
@@ -84,7 +86,7 @@ export function Slider({ min, max, step, value, invalid, onChange, onActive, acc
       onLayout={(e) => setWidth(e.nativeEvent.layout.width)}
       accessibilityRole="adjustable"
       accessibilityLabel={accessibilityLabel}
-      accessibilityValue={{ min, max, now: value }}
+      accessibilityValue={{ min, max, now: value, text: unit ? `${value} ${unit}` : undefined }}
       accessibilityActions={[{ name: 'increment' }, { name: 'decrement' }]}
       onAccessibilityAction={(e) => nudge(e.nativeEvent.actionName === 'increment' ? 1 : -1)}
       {...pan.panHandlers}

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { missingPricesText, orderCost } from '../engine/cost.ts';
 import { edgeCodes } from '../engine/edge-banding.ts';
 import { nest } from '../engine/nesting.ts';
@@ -6,6 +6,8 @@ import { BORING_NOTE, ORDER_BAND_NOTE, buildOrder, orderText } from '../engine/o
 import type { Design } from '../engine/types.ts';
 import { useAppStore } from '../state/store.ts';
 import { hardwareText } from '../engine/labels.ts';
+import { ShareActions } from './ShareActions.tsx';
+import { STALE_STICKY, StalePill } from './StalePill.tsx';
 
 const GRAIN_LABEL = { length: 'largo', width: 'ancho' } as const;
 
@@ -21,26 +23,6 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
   const setHardwarePrice = useAppStore((s) => s.setHardwarePrice);
   const setBoringPrice = useAppStore((s) => s.setBoringPrice);
   const cost = orderCost(order, prices);
-  const [status, setStatus] = useState<string | null>(null);
-
-  const canShare = typeof navigator.share === 'function';
-
-  async function share() {
-    try {
-      await navigator.share({ title: `Pedido — ${title}`, text });
-    } catch (e) {
-      if (!(e instanceof DOMException && e.name === 'AbortError')) setStatus('No se pudo compartir');
-    }
-  }
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(text);
-      setStatus('Copiado');
-    } catch {
-      setStatus('No se pudo copiar');
-    }
-  }
 
   function setPriceByKey(key: string, value: number) {
     if (key.startsWith('sheet:')) setSheetPrice(Number(key.slice('sheet:'.length)), value);
@@ -51,12 +33,9 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
   }
 
   return (
-    <div
-      className={`relative bg-paper px-4 py-5 transition-opacity lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7 duration-300 ${
-        stale ? 'opacity-40' : ''
-      }`}
-    >
-      <div className="mx-auto max-w-[1200px]">
+    <div className="relative bg-paper px-4 py-5 lg:h-full lg:overflow-y-auto lg:px-8 lg:py-7">
+      {stale && <StalePill className={STALE_STICKY} />}
+      <div className={`mx-auto max-w-[1200px] transition-opacity duration-300 ${stale ? 'opacity-40' : ''}`}>
         <header className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <h2 className="display text-2xl">Pedido para maderería</h2>
@@ -64,32 +43,10 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
               {title} · medidas en mm, largo × ancho
             </p>
           </div>
-          <div className="flex items-center gap-2">
-            {status && (
-              <span role="status" className="text-[13px] font-semibold text-ink-soft">
-                {status}
-              </span>
-            )}
-            {canShare && (
-              <button
-                onClick={share}
-                disabled={stale}
-                className="h-10 rounded-lg bg-accent px-4 text-sm font-bold text-white transition-[filter] hover:brightness-110 disabled:pointer-events-none disabled:opacity-50"
-              >
-                Compartir
-              </button>
-            )}
-            <button
-              onClick={copy}
-              disabled={stale}
-              className="h-10 rounded-lg border border-rule bg-panel px-4 text-sm font-bold text-ink transition-colors hover:border-ink-soft disabled:pointer-events-none disabled:opacity-50"
-            >
-              Copiar
-            </button>
-          </div>
+          <ShareActions title={`Pedido — ${title}`} text={text} disabled={stale} />
         </header>
 
-        <div className="mt-8 flex flex-col gap-10 lg:flex-row lg:items-start">
+        <div className="mt-8 flex flex-col gap-10 xl:flex-row xl:items-start">
           <section className="min-w-0 flex-1 space-y-8">
             {order.groups.map((g) => (
               <div key={g.stock.id}>
@@ -186,7 +143,7 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
             </div>
           </section>
 
-          <section className="w-full lg:w-96 lg:shrink-0">
+          <section className="w-full xl:w-96 xl:shrink-0">
             <h3 className="rule-label">Costo</h3>
             <p className="mt-2 text-xs text-ink-soft">Precios de tu maderería en MXN. Se guardan en este navegador.</p>
             <ul className="mt-4 space-y-3">
@@ -203,10 +160,10 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
                             key={u}
                             onClick={() => setCutUnit(u)}
                             aria-pressed={prices.cut.unit === u}
-                            className={`h-8 rounded-md border px-2.5 text-xs font-semibold transition-colors ${
+                            className={`h-10 rounded-md border px-2.5 text-xs font-semibold transition-colors lg:h-8 ${
                               prices.cut.unit === u
                                 ? 'border-accent bg-accent-tint text-accent-ink'
-                                : 'border-rule bg-panel text-ink-soft hover:border-ink-soft'
+                                : 'border-rule bg-panel text-ink-soft hover:border-rule-strong hover:text-ink'
                             }`}
                           >
                             {u === 'meter' ? 'por metro' : 'por corte'}
@@ -226,7 +183,8 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
                       defaultValue={l.price ?? ''}
                       onChange={(e) => setPriceByKey(l.key, Number(e.target.value) || 0)}
                       placeholder="0"
-                      className="w-28 rounded-md border border-rule bg-panel px-2.5 py-1.5 font-mono text-sm tabular-nums transition-colors focus:border-accent focus:outline-none"
+                      // 16px under lg: iOS Safari zooms the page into any smaller field on focus
+                      className="h-10 w-28 rounded-md border border-rule bg-panel px-2.5 font-mono text-base tabular-nums transition-colors focus:border-accent lg:h-9 lg:text-sm"
                     />
                     <span className="text-[13px] text-ink-soft">por {l.unit}</span>
                     <span className="ml-auto font-mono text-xs tabular-nums text-ink-soft">
@@ -244,14 +202,6 @@ export function OrderPanel({ design, title, stale }: { design: Design; title: st
           </section>
         </div>
       </div>
-
-      {stale && (
-        <div className="pointer-events-none absolute inset-x-0 top-5 flex justify-center">
-          <span className="rounded-full border border-cut bg-cut-tint px-3 py-1 text-xs text-cut-ink">
-            Corrige los errores para actualizar el modelo
-          </span>
-        </div>
-      )}
     </div>
   );
 }

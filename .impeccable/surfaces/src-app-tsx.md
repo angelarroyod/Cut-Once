@@ -30,7 +30,7 @@ OWN-WORLD:
 - Notebook-white paper, with a cyan 100 mm cuadrícula on the work stages only.
 - Ballpoint blue for selection, primary actions and dimensions; highlighter yellow for the active piece or step; margin red only for cuts and errors; pencil graphite for secondary text.
 - The night theme is ink-blue paper with a faint grid.
-- Atkinson Hyperlegible Next for the UI and Atkinson Hyperlegible Mono for every number.
+- Inter for everything; `font-mono` marks numbers with tabular figures and a slashed zero.
 - One-pixel hairlines, 8–14 px radii, soft offset shadows only.
 
 STORY: A beginner sees the piece standing on a measurable page and drags a size; the number and the model change together. They follow cuts, steps and the store list without leaving the notebook, and take the order to the counter.
