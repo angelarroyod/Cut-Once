@@ -24,7 +24,7 @@ FONT = Font(os.path.join(
     'AtkinsonHyperlegibleNext_800ExtraBold.ttf',
 ))
 
-BLUE, HI, INK, WHITE, BLACK = '#2340c8', '#ffe14d', '#141a2b', '#ffffff', '#000000'
+BLUE, HI, INK, WHITE, BLACK = '#0067b8', '#ffb900', '#141a2b', '#ffffff', '#000000'
 NAME = 'Cut Once'
 
 KERF = 28  # the numeral's stem, on the 256 canvas

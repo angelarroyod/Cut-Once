@@ -22,7 +22,7 @@ The web and iOS apps use this kit. `public/` and `mobile/assets/images/` hold co
 
 ## Decisions worth knowing
 
-- **Blue on light, two colours on dark.** Yellow on white is 1.3:1 and the board falls apart, so the white and yellow pair only appears on blue or night.
+- **Blue on light, two colours on dark.** Yellow on white is 1.7:1 and the board falls apart, so the white and yellow pair only appears on blue or night.
 - **Three kerf widths.** 28 units on the master, 31 on reversed files because light shapes spread on dark, and a separate 16 px drawing with a 2 px kerf on whole pixels.
 - **The wordmark is unmodified Atkinson Hyperlegible Next ExtraBold, outlined.** The iOS app speaks in it; the web app moved to Inter and draws this wordmark as an outlined path, so the name keeps its lettering. The symbol carries the ownable idea. The same weight is used on dark.
 
@@ -48,7 +48,7 @@ Measured:
 
 - **Trademark search.** Only one web search and a domain lookup so far. Get a professional search before the name goes public. A reverse image search on the mark is also worth doing.
 - **Domain.** `cutonce.tools`, `cutonce.works` and `cutonce.build` were free when checked, and `.com` and `.app` are taken. Nothing is registered. `cutonce.tools` and `@cutonce` on the board are placeholders.
-- **Print.** CMYK values are arithmetic, not colour-managed. Pantone is unmatched: 2728 C is a starting point for the blue, and the yellow has none. Proof before printing.
+- **Print.** CMYK values are arithmetic, not colour-managed. Pantone is unmatched: 300 C is a starting point for the blue and 7549 C for the yellow. Proof before printing.
 - **Beginner reaction.** No real users have seen the name or the mark.
 - **iPhone.** The icon has not been seen on a device.
 - **Android.** `mobile/app.json` still points at Expo's default Android icons. The kit has no Android set, since iOS is the documented target.
@@ -56,7 +56,7 @@ Measured:
 ## Kept on purpose
 
 - The `localStorage` keys `planificador.prices` and `planificador.theme`. Renaming them wipes saved prices and theme for current users.
-- In the apps, the tile's blue is the `accent` token, which is lighter at night (`#3d5be8`) so the tile lifts off the night page. The icons outside the apps stay `#2340c8`.
+- In the apps, the tile's blue is the `accent` token, which is lighter at night (`#1a78c8`) so the tile lifts off the night page. The icons outside the apps stay `#0067b8`.
 - The iOS icon is a plain PNG, not an Icon Composer package, because a `.icon` can't be checked without a Mac.
 - The older specs and plans in `docs/superpowers/` still say Planificador, because they record what was decided at the time.
 
