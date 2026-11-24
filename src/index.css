@@ -22,12 +22,12 @@
   --color-rule-strong: #b7c2d3;
 
   /* Ballpoint blue. `accent` fills and borders, `accent-ink` is the same ink as text. */
-  --color-accent: #2340c8;
-  --color-accent-ink: #2340c8;
-  --color-accent-tint: #e9edff;
+  --color-accent: #0067b8;
+  --color-accent-ink: #0067b8;
+  --color-accent-tint: #e6f1fb;
 
   /* Highlighter: the active piece or step, always under ink-coloured text. */
-  --color-hi: #ffe14d;
+  --color-hi: #ffb900;
 
   /* Margin red: cut lines, errors, invalid. Text uses cut-ink. */
   --color-cut: #d93a2f;
@@ -70,11 +70,11 @@
     --color-rule: #262e40;
     --color-rule-strong: #3a4357;
 
-    --color-accent: #3d5be8;
-    --color-accent-ink: #a3b2ff;
-    --color-accent-tint: #1c2650;
+    --color-accent: #1a78c8;
+    --color-accent-ink: #6cb8f6;
+    --color-accent-tint: #0b2742;
 
-    --color-hi: #ffe14d;
+    --color-hi: #ffb900;
 
     --color-cut: #ff6b5e;
     --color-cut-ink: #ff8a7f;

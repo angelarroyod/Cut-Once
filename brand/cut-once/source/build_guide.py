@@ -12,7 +12,7 @@ REPO = os.path.dirname(os.path.dirname(KIT))
 sys.path.insert(0, os.path.expanduser('~/.claude/plugins/cache/logo-design-skill/logo-design/1.4.5/skills/logo-design/scripts'))
 import render_png  # noqa: E402
 
-BLUE, HI, INK, NIGHT, PAPER, CUT = '#2340c8', '#ffe14d', '#141a2b', '#0c1226', '#f4f7fb', '#d93a2f'
+BLUE, HI, INK, NIGHT, PAPER, CUT = '#0067b8', '#ffb900', '#141a2b', '#0c1226', '#f4f7fb', '#d93a2f'
 FONTS = 'mobile/node_modules/@expo-google-fonts'
 
 
@@ -132,12 +132,12 @@ th{{font-weight:800;font-size:8.5pt}}
 <div class="col"><div><h2>Clear space</h2>{clear_space()}<p class="note">Keep X clear on every side. X is the gap between the symbol and the word, about a quarter of the symbol's width. It scales with the logo.</p></div>
 <section><h2>Colour</h2>
 <table><tr><th></th><th>Name</th><th>HEX</th><th>RGB</th><th>CMYK (proof first)</th></tr>
-{swatch(BLUE, 'Ballpoint blue', '#2340C8', '35 64 200', '82 68 0 22')}
-{swatch(HI, 'Highlighter yellow', '#FFE14D', '255 225 77', '0 12 70 0')}
+{swatch(BLUE, 'Ballpoint blue', '#0067b8', '0 103 184', '100 44 0 28')}
+{swatch(HI, 'Highlighter yellow', '#ffb900', '255 185 0', '0 27 100 0')}
 {swatch(INK, 'Ink, for the word', '#141A2B', '20 26 43', '53 40 0 83')}
 {swatch(NIGHT, 'Night', '#0C1226', '12 18 38', '68 53 0 85')}
 </table>
-<p class="note">CMYK is straight arithmetic from RGB, not a colour-managed conversion. No Pantone is matched yet: for the blue start from Pantone 2728 C, which is slightly greener, and pick the yellow from a physical guide.</p></section></div>
+<p class="note">CMYK is straight arithmetic from RGB, not a colour-managed conversion. No Pantone is matched yet: for the blue start from Pantone 300 C and for the yellow from 7549 C, then check both against a physical guide.</p></section></div>
 <div class="col"><div><h2>Minimum size</h2>
 <table><tr><th>Version</th><th>Screen</th><th>Print</th></tr>
 <tr><td>Horizontal</td><td class="m">120 px wide</td><td class="m">30 mm wide</td></tr>
@@ -150,17 +150,17 @@ th{{font-weight:800;font-size:8.5pt}}
 </section>
 
 <section><h2>Approved backgrounds</h2><div class="c6">
-{chip('#fff', 'horizontal/cut-once-horizontal-color.svg', 'Colour on white <span class="m">8.0:1</span>', 92, True)}
-{chip(PAPER, 'horizontal/cut-once-horizontal-color.svg', 'Colour on paper <span class="m">7.4:1</span>', 92)}
+{chip('#fff', 'horizontal/cut-once-horizontal-color.svg', 'Colour on white <span class="m">5.8:1</span>', 92, True)}
+{chip(PAPER, 'horizontal/cut-once-horizontal-color.svg', 'Colour on paper <span class="m">5.4:1</span>', 92)}
 {chip(NIGHT, 'horizontal/cut-once-horizontal-on-dark.svg', 'Two-colour on night <span class="m">14:1</span>', 92)}
-{chip(BLUE, 'horizontal/cut-once-horizontal-on-dark.svg', 'Two-colour on blue <span class="m">6.1:1</span>', 92)}
-{chip(HI, 'horizontal/cut-once-horizontal-black.svg', 'Black on yellow <span class="m">16:1</span>', 92)}
+{chip(BLUE, 'horizontal/cut-once-horizontal-on-dark.svg', 'Two-colour on blue <span class="m">3.4:1</span>', 92)}
+{chip(HI, 'horizontal/cut-once-horizontal-black.svg', 'Black on yellow <span class="m">12:1</span>', 92)}
 {chip('#3a3f4b', 'horizontal/cut-once-horizontal-white.svg', 'White on any dark colour', 92)}
 </div><p class="note">Ratios are the weakest logo colour against that background. On photos, use the tile. Yellow stays on blue or night; it never touches white or paper. Files: <span class="m">-color</span> for light backgrounds, <span class="m">-on-dark</span> for night and blue, <span class="m">-black</span> and <span class="m">-white</span> for one ink.</p></section>
 
 <section><h2>Please don't</h2><div class="c6">
-{wrong('#fff', two, 'Yellow on white <span class="m">1.3:1</span>', True)}
-{wrong(NIGHT, blue, 'Blue on night <span class="m">2.3:1</span>')}
+{wrong('#fff', two, 'Yellow on white <span class="m">1.7:1</span>', True)}
+{wrong(NIGHT, blue, 'Blue on night <span class="m">3.2:1</span>')}
 {wrong('#fff', f'<g transform="translate(256 0) scale(-1 1)">{blue}</g>', 'Mirror: the 1 reads backward', True)}
 {wrong('#fff', filled, 'Close or narrow the kerf', True)}
 {wrong(BLUE, swapped, 'Swap the two pieces')}
